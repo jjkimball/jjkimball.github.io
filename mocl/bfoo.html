@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <style>
+      .entryTime {
+      font-style: italic;
+      }
+      div.timelineEntry {
+      margin-bottom: 5px;
+      border: 3px solid;
+      }
+      div.tweet {
+      border-color:  lightblue;
+      }
+      span.tweet {
+      background-color: powderblue;
+      font-weight: bold;
+      padding-left: 3px;
+      padding-right: 3px;
+      }
+      div.gnews {
+      border-color:  lightgreen;
+      }
+      span.gnews {
+      background-color: palegreen;
+      font-weight: bold;
+      padding-left: 3px;
+      padding-right: 3px;
+      }
+      div.site {
+      border-color:  lightsalmon;
+      }
+      span.site {
+      background-color: bisque;
+      font-weight: bold;
+      padding-left: 3px;
+      padding-right: 3px;
+      }
+      div.bill {
+      border-color:  mediumorchid;
+      }
+      span.bill {
+      background-color: plum;
+      font-weight: bold;
+      padding-left: 3px;
+      padding-right: 3px;
+      }
+      .topic {
+        font-style: italic;
+        background-color: gainsboro;
+      }
+  </style>
+
+  <script type="text/javascript">
+
+ var topicMask = { "ELECTORAL" : "64", "LGBTQ" : "4096", "NONE" : "8192", "POLICING" : "16384", "DISINFO" : "16", "RON WYDEN SEN" : "4", "ENVIRON" : "128", "ERIGHTS" : "256", "HEALTH" : "512", "IMMIGRATION" : "1024", "PETER DEFAZIO REP" : "2", "CORRUPTION" : "8", "ECONOMIC" : "32", "JEFF MERKLEY SEN" : "1", "TOWNHALLS" : "65536", "RACISM" : "32768", "INTERNATIONAL" : "2048", };
+
+
+function allCheckboxes( fsId, isChecked ) {
+  let fieldset = document.getElementById(fsId);
+  let cboxes = fieldset.getElementsByTagName("input");
+  for (let i = 0, len = cboxes.length; i<len; i++) {
+     if ( cboxes[i].type === 'checkbox' ) {
+       cboxes[i].checked = ( isChecked ^ (cboxes[i].name === "NONE") )
+     }
+  }
+  updateVisibility();
+}
+function updateVisibility() {
+  let mocSelected = 0;
+  let fieldset = document.getElementById("mocVisibility");
+  let cboxes = fieldset.getElementsByTagName("input");
+  for (let i = 0, len = cboxes.length; i<len; i++) {
+     if ( cboxes[i].type === 'checkbox' && cboxes[i].checked) {
+       mocSelected |= topicMask[cboxes[i].name];
+     }
+  }
+  let issueSelected = 0;
+  fieldset = document.getElementById("issueVisibility");
+  cboxes = fieldset.getElementsByTagName("input");
+  for (let i = 0, len = cboxes.length; i<len; i++) {
+     if ( cboxes[i].type === 'checkbox' && cboxes[i].checked) {
+       issueSelected |= topicMask[cboxes[i].name];
+     }
+  }
+  let items = document.getElementsByClassName("timelineEntry");
+  for (let i = 0, len = items.length; i<len; i++) {  
+    let topicBitmap = items[i].dataset.topics;
+    let showIt = ( (topicBitmap & mocSelected) && (topicBitmap & issueSelected) );
+    items[i].style.display = ( showIt ? 'block' : 'none' );
+  }
+}
+
+function bodyLoaded() {
+  allCheckboxes('mocVisibility',true);
+  allCheckboxes('issueVisibility',true);
+}
+
+
+  </script>
+
+
+  </head>
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<h1>Members of Congress / Legislation Activity for the last 15 days</h1>
+
+  <form onsubmit="event.preventDefault();">
+    <fieldset>
+      <legend>Only show MoC:</legend>
+      <div id="mocVisibility">
+        <label> <input type="checkbox" onclick="updateVisibility()" name="RON WYDEN SEN"/>Sen Wyden</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="JEFF MERKLEY SEN"/>Sen Merkley</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="PETER DEFAZIO REP"/>Rep DeFazio</label>
+        <br/>	
+	<button onclick="allCheckboxes('mocVisibility',true)">Check all</button>
+	<button onclick="allCheckboxes('mocVisibility',false)">Clear all</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Only show issue:</legend>
+      <div id="issueVisibility">
+        <label> <input type="checkbox" onclick="updateVisibility()" name="HEALTH">Health Care and Reproductive Justice</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="IMMIGRATION">Immigration and Refugees</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="ECONOMIC">Economic Justice and Tax Reform</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="CORRUPTION">Transparency and Corruption</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="ELECTORAL">Voting Rights and Electoral Assurance</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="POLICING">Policing and Criminal Justice</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="LGBTQ">LGBTQ Equality</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="ERIGHTS">Online Rights</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="DISINFO">Disinformation</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="ENVIRON">Environment</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="INTERNATIONAL">International Relations</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="TOWNHALLS">Town Halls</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="RACISM">Civil Rights and White Nationalism</label>
+        <label> <input type="checkbox" onclick="updateVisibility()" name="NONE">None of the Above</label>
+    <br/>
+	<button onclick="allCheckboxes('issueVisibility',true)">Check all</button>
+	<button onclick="allCheckboxes('issueVisibility',false)">Clear all</button>
+      </div>
+    </fieldset>
+  </form>
+
+
+<h2>Tue 2017-09-26</h2>
+<div class="tweet timelineEntry rounded" data-topics="516"> <p><span class="entryTime">08:34AM</span> <span class="tweet">&#x1F426; Sen Wyden tweets: </span> <a href="https://twitter.com/statuses/912701959903350786" target="_blank">We will not stop fighting! #GrahamCassidy cuts to #Medicaid devastating for people with disabilities. LIVE: https://t.co/9SYLGx1FWX<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Wyden</span>) </p>
+</div>
+<div class="tweet timelineEntry rounded" data-topics="8196"> <p><span class="entryTime">07:50AM</span> <span class="tweet">&#x1F426; Sen Wyden tweets: </span> <a href="https://twitter.com/statuses/912690950153150464" target="_blank">Good. Now Congress should pass my #FreeCreditFreeze Act https://t.co/avepnTdvzv<br/></a> <br/>  (<span class="topic">Sen Wyden</span>, <span class="topic">None of the Above</span>) </p>
+</div>
+<div class="tweet timelineEntry rounded" data-topics="513"> <p><span class="entryTime">07:35AM</span> <span class="tweet">&#x1F426; Sen Merkley tweets: </span> <a href="https://twitter.com/statuses/912687149526474753" target="_blank">Honored to meet brave @NationalADAPT activists protesting #GrahamCassidy last night. They're fighting for all of us. https://t.co/vPmwy7f426<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Merkley</span>) </p>
+</div>
+<div class="gnews timelineEntry rounded" data-topics="16900"> <p><span class="entryTime">07:08AM</span> <span class="gnews">&#x1f4f0; GoogleNews: </span> <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNEJN5hZC76dapRdkHOz2163tz-06g&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779618799719&ei=g3TKWejREdWUhQHl_4bADQ&url=http://khn.org/morning-breakout/kill-the-bill-dont-kill-us-protests-erupt-at-committee-hearing-on-gop-health-measure/" target="_blank">'Kill The Bill, Don't Kill Us': Protests Erupt At Committee Hearing On GOP Health Measure - Kaiser Health News<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Policing and Criminal Justice</span>) </p>
+</div>
+<div class="tweet timelineEntry rounded" data-topics="8193"> <p><span class="entryTime">06:32AM</span> <span class="tweet">&#x1F426; Sen Merkley tweets: </span> <a href="https://twitter.com/statuses/912671230326648832" target="_blank">Fewer than 1 in 5 Americans want Congress to cut taxes for the wealthy or corporations. So why is that the entire G… https://t.co/eUYiLk2KHv<br/></a> <br/>  (<span class="topic">Sen Merkley</span>, <span class="topic">None of the Above</span>) </p>
+</div>
+<div class="gnews timelineEntry rounded" data-topics="516"> <p><span class="entryTime">10:43PM</span> <span class="gnews">&#x1f4f0; GoogleNews: </span> <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNFJqjxMctrccD-_eNYa5KqgdUtTng&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=g3TKWejREdWUhQHl_4bADQ&url=http://www.washingtonpost.com/video/politics/hatch-to-wyden-lets-show-some-respect-for-senator-cassidy/2017/09/25/07317966-a22a-11e7-b573-8ec86cdfe1ed_video.html" target="_blank">Hatch to Wyden: 'Let's show some respect for Senator Cassidy' - Washington Post<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Wyden</span>) </p>
+</div>
+<div class="gnews timelineEntry rounded" data-topics="34312"> <p><span class="entryTime">07:52PM</span> <span class="gnews">&#x1f4f0; GoogleNews: </span> <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNEBNRUNPtw87EnUwvJGkGg4nEUWEw&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779617955931&ei=nHPKWYjrE4SWhgG5zI74Dw&url=http://www.startribune.com/klobuchar-s-90-minutes-in-the-spotlight/447713563/" target="_blank">Sen. Klobuchar steers national health care debate to middle ground - Minneapolis Star Tribune<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Civil Rights and White Nationalism</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Transparency and Corruption</span>) </p>
+</div>
+<div class="tweet timelineEntry rounded" data-topics="8193"> <p><span class="entryTime">06:57PM</span> <span class="tweet">&#x1F426; Sen Merkley tweets: </span> <a href="https://twitter.com/statuses/912496427011641344" target="_blank">Full equality is the right thing to do, and it’s good for biz too. Thanks to 100+ companies for supporting the… https://t.co/19OyPCIiWJ<br/></a> <br/>  (<span class="topic">Sen Merkley</span>, <span class="topic">None of the Above</span>) </p>
+</div>
+<div class="site timelineEntry rounded" data-topics="513"> <p><span class="entryTime">06:40PM</span> <span class="site">&#x1F4C4; From Sen Merkley (press release): </span> <a href="http://www.merkley.senate.gov/news/press-releases/merkley-statement-on-new-health-care-cbo-score-" target="_blank">Merkley Statement on New Health Care CBO Score<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Merkley</span>) </p>
+</div>
+<div class="tweet timelineEntry rounded" data-topics="8193"> <p><span class="entryTime">06:20PM</span> <span class="tweet">&#x1F426; Sen Merkley tweets: </span> <a href="https://twitter.com/statuses/912486928758509568" target="_blank">Lower penalties and wait for bankers to come clean? Sounds familiar. #GreatRecession https://t.co/oOOqa8Eydu<br/></a> <br/>  (<span class="topic">Sen Merkley</span>, <span class="topic">None of the Above</span>) </p>
+</div>
+<div class="tweet timelineEntry rounded" data-topics="513"> <p><span class="entryTime">05:54PM</span> <span class="tweet">&#x1F426; Sen Merkley tweets: </span> <a href="https://twitter.com/statuses/912480386881609729" target="_blank">Here’s a hint: When you find out that your "health care" bill guts care, eviscerates Medicaid and raises costs, it'… https://t.co/Dm1wwaR9NC<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Merkley</span>) </p>
+</div>
+<div class="gnews timelineEntry rounded" data-topics="3876"> <p><span class="entryTime">05:30PM</span> <span class="gnews">&#x1f4f0; GoogleNews: </span> <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNGANoZASb-6UBP0YWCBbbCMcA-Ugg&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779616243803&ei=g3TKWejREdWUhQHl_4bADQ&url=http://thehill.com/opinion/finance/352350-dont-throw-the-baby-out-with-the-batwater" target="_blank">Don't throw the baby out with the BATwater - The Hill<br/></a> <br/>  (<span class="topic">Economic Justice and Tax Reform</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Online Rights</span>, <span class="topic">International Relations</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Immigration and Refugees</span>) </p>
+</div>
+<div class="gnews timelineEntry rounded" data-topics="34690"> <p><span class="entryTime">05:15PM</span> <span class="gnews">&#x1f4f0; GoogleNews: </span> <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNG0VLKQ9dY-WsnrWiSEgUCeKx2kew&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779617896915&ei=SXTKWciLHoSWhgG5zI74Dw&url=http://www.politico.com/story/2017/09/25/house-democrats-faa-extension-243102" target="_blank">House Democrats block FAA extension - POLITICO - Politico<br/></a> <br/>  (<span class="topic">Civil Rights and White Nationalism</span>, <span class="topic">Environment</span>, <span class="topic">Online Rights</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Rep DeFazio</span>) </p>
+</div>
+<div class="gnews timelineEntry rounded" data-topics="17925"> <p><span class="entryTime">05:06PM</span> <span class="gnews">&#x1f4f0; GoogleNews: </span> <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNGQAPTHRfLhwQWJjkHhUhZtqV8Hhg&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=nHPKWYjrE4SWhgG5zI74Dw&url=https://www.courthousenews.com/9th-circuit-nominee-bolster-trumps-immigration-policy/" target="_blank">9th Circuit Nominee Could Bolster Trump's Immigration Policy - Courthouse News Service<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Policing and Criminal Justice</span>, <span class="topic">Sen Merkley</span>) </p>
+</div>
+
+    
+  </body>
+</html>
