@@ -123,10 +123,10 @@ function bodyLoaded() {
 <h1>Members of Congress / Legislation Activity for the last 15 days</h1>
 
   <form onsubmit="event.preventDefault();" class="visibilityForm">
-    <fieldset class="form-group ml-4">
+    <fieldset class="form-group pl-2">
       <legend>Only show MoC:</legend>
-      <div id="mocVisibility">
-	<div class="form-check form-check-inline">
+      <div id="mocVisibility"">
+	<div class="form-check form-check-inline pl-4">
           <label> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="RON WYDEN SEN"/>Sen Wyden</label>
 	  </div>
 	<div class="form-check form-check-inline">
@@ -136,12 +136,12 @@ function bodyLoaded() {
           <label> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="PETER DEFAZIO REP"/>Rep DeFazio</label>
 	  </div>
         <br/>	
-	<button class="btn btn-sm" onclick="allCheckboxes('mocVisibility',true)">Check all</button>
-	<button class="btn btn-sm" onclick="allCheckboxes('mocVisibility',false)">Clear all</button>
+	<button class="btn btn-outline-primary btn-sm" onclick="allCheckboxes('mocVisibility',true)">Check all</button>
+	<button class="btn btn-outline-primary btn-sm" onclick="allCheckboxes('mocVisibility',false)">Clear all</button>
       </div>
     </fieldset>
     <hr/>
-    <fieldset class="form-group ml-4">
+    <fieldset class="form-group pl-2">
       <legend>Only show issue:</legend>
       <div id="issueVisibility">
 	<div class="form-check form-check-inline">
@@ -187,8 +187,8 @@ function bodyLoaded() {
           <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="NONE">None of the Above</label>
 	  </div>
     <br/>
-	<button class="btn btn-sm" onclick="allCheckboxes('issueVisibility',true)">Check all</button>
-	<button class="btn btn-sm" onclick="allCheckboxes('issueVisibility',false)">Clear all</button>
+	<button class="btn btn-outline-primary btn-sm" onclick="allCheckboxes('issueVisibility',true)">Check all</button>
+	<button class="btn btn-outline-primary btn-sm" onclick="allCheckboxes('issueVisibility',false)">Clear all</button>
       </div>
     </fieldset>
   </form>
