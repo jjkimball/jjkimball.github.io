@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
   <style>
+      .timelinePage {
+      background-color: snow;
+      }
       .visibilityForm {
-      background-color: whitesmoke;
+      border: 1px solid;
+      background-color: whitesmoke;      
       margin-bottom: 5px;
       }
       .entryTime {
@@ -116,7 +120,7 @@ function bodyLoaded() {
 
   </head>
 
-  <body class="ml-2 mr-2" onload="bodyLoaded();">
+  <body class="ml-2 mr-2 timelinePage" onload="bodyLoaded();">
   <div class="container">    
 
     <!-- Optional JavaScript -->
@@ -127,7 +131,7 @@ function bodyLoaded() {
 
 <h1>Members of Congress / Legislation Activity for the last 15 days</h1>
 
-  <div class="row visibilityForm ml-2 mr-2">
+  <div class="row visibilityForm ml-2 mr-2 pt-2 pb-2">
     <div class="col-sm-5">
       
      <div class="dropdown">
