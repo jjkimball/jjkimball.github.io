@@ -17,6 +17,9 @@
       background-color: whitesmoke;      
       margin-bottom: 5px;
       }
+      .visibilityDropdown {
+      background-color: whitesmoke;      
+      }      
       .entryTime {
       font-style: italic;
       }
@@ -131,13 +134,13 @@ function bodyLoaded() {
 
 <h1>Members of Congress / Legislation Activity for the last 15 days</h1>
 
-  <div class="row visibilityForm ml-2 mr-2 pt-2 pb-2">
+  <div class="row visibilityForm ml-2 mr-2">
     <div class="col-sm-5">
       
      <div class="dropdown">
-       <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" id="mocDropdownButton" aria-haspopup="true" aria-expanded="false">Select MoCs</button>
+       <button type="button" class="btn btn-secondary btn-sm dropdown-toggle mt-2 mb-2" data-toggle="dropdown" id="mocDropdownButton" aria-haspopup="true" aria-expanded="false">Select MoCs</button>
   <form onsubmit="event.preventDefault();" class="dropdown-menu" aria-labelledby="mocDropdownButton">
-    <fieldset class="form-group pl-2">
+    <fieldset class="form-group pl-2 visibilityDropdown">
       <legend>Only show MoC:</legend>
       <div id="mocVisibility"">
 	<div class="form-check form-check-inline pl-4">
@@ -160,9 +163,9 @@ function bodyLoaded() {
 
     <div class="col-sm-5">
      <div class="dropdown">
-       <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" id="issuesDropdownButton" aria-haspopup="true" aria-expanded="false">Select Issues</button>
+       <button type="button" class="btn btn-secondary btn-sm dropdown-toggle mt-2 mb-2" data-toggle="dropdown" id="issuesDropdownButton" aria-haspopup="true" aria-expanded="false">Select Issues</button>
   <form onsubmit="event.preventDefault();" class="dropdown-menu" aria-labelledby="issuesDropdownButton">
-    <fieldset class="form-group pl-2">
+    <fieldset class="form-group pl-2 visibilityDropdown">
       <legend>Only show issue:</legend>
       <div id="issueVisibility">
 	<div class="form-check form-check-inline">
@@ -216,7 +219,7 @@ function bodyLoaded() {
 </div>
 </div>
     <div class="col-sm-2">
-      <label id="numItemsShown">Items shown: 0</label>
+      <label class="mt-2 mb-2" id="numItemsShown">Items shown: 0</label>
     </div>
 </div>
 
