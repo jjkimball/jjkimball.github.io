@@ -10,7 +10,8 @@
 
   <style>
       .visibilityForm {
-      border: 1px solid;
+      background-color: whitesmoke;
+      margin-bottom: 5px;
       }
       .entryTime {
       font-style: italic;
@@ -77,6 +78,7 @@ function allCheckboxes( fsId, isChecked ) {
   updateVisibility();
 }
 function updateVisibility() {
+  let numVisible = 0;					      
   let mocSelected = 0;
   let fieldset = document.getElementById("mocVisibility");
   let cboxes = fieldset.getElementsByTagName("input");
@@ -98,7 +100,9 @@ function updateVisibility() {
     let topicBitmap = items[i].dataset.topics;
     let showIt = ( (topicBitmap & mocSelected) && (topicBitmap & issueSelected) );
     items[i].style.display = ( showIt ? 'block' : 'none' );
+    if (showIt) { numVisible++; }
   }
+  document.getElementById( "numItemsShown" ).innerHTML = "Items shown: " + numVisible;
 }
 
 function bodyLoaded() {
@@ -112,7 +116,8 @@ function bodyLoaded() {
 
   </head>
 
-  <body class="ml-2 mr-2" onload="bodyLoaded();"> 
+  <body class="ml-2 mr-2" onload="bodyLoaded();">
+  <div class="container">    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -122,69 +127,81 @@ function bodyLoaded() {
 
 <h1>Members of Congress / Legislation Activity for the last 15 days</h1>
 
-  <form onsubmit="event.preventDefault();" class="visibilityForm">
+  <div class="row visibilityForm ml-2 mr-2">
+    <div class="col-lg-5">
+      
+     <div class="dropdown">
+       <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" id="mocDropdownButton" aria-haspopup="true" aria-expanded="false">Select MoCs</button>
+  <form onsubmit="event.preventDefault();" class="dropdown-menu" aria-labelledby="mocDropdownButton">
     <fieldset class="form-group pl-2">
       <legend>Only show MoC:</legend>
       <div id="mocVisibility"">
 	<div class="form-check form-check-inline pl-4">
-          <label> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="RON WYDEN SEN"/>Sen Wyden</label>
+          <label> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="RON WYDEN SEN"/>&nbsp; Sen Wyden &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="JEFF MERKLEY SEN"/>Sen Merkley</label>
+          <label> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="JEFF MERKLEY SEN"/>&nbsp; Sen Merkley &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="PETER DEFAZIO REP"/>Rep DeFazio</label>
+          <label> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="PETER DEFAZIO REP"/>&nbsp; Rep DeFazio &nbsp;</label>
 	  </div>
         <br/>	
 	<button class="btn btn-outline-primary btn-sm" onclick="allCheckboxes('mocVisibility',true)">Check all</button>
 	<button class="btn btn-outline-primary btn-sm" onclick="allCheckboxes('mocVisibility',false)">Clear all</button>
       </div>
     </fieldset>
-    <hr/>
+  </form>
+</div>
+    </div>
+
+    <div class="col-lg-5">
+     <div class="dropdown">
+       <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" id="issuesDropdownButton" aria-haspopup="true" aria-expanded="false">Select Issues</button>
+  <form onsubmit="event.preventDefault();" class="dropdown-menu" aria-labelledby="issuesDropdownButton">
     <fieldset class="form-group pl-2">
       <legend>Only show issue:</legend>
       <div id="issueVisibility">
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="HEALTH">Health Care and Reproductive Justice</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="HEALTH">&nbsp; Health Care and Reproductive Justice &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="IMMIGRATION">Immigration and Refugees</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="IMMIGRATION">&nbsp; Immigration and Refugees &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="ECONOMIC">Economic Justice and Tax Reform</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="ECONOMIC">&nbsp; Economic Justice and Tax Reform &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="CORRUPTION">Transparency and Corruption</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="CORRUPTION">&nbsp; Transparency and Corruption &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="ELECTORAL">Voting Rights and Electoral Assurance</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="ELECTORAL">&nbsp; Voting Rights and Electoral Assurance &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="POLICING">Policing and Criminal Justice</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="POLICING">&nbsp; Policing and Criminal Justice &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="LGBTQ">LGBTQ Equality</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="LGBTQ">&nbsp; LGBTQ Equality &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="ERIGHTS">Online Rights</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="ERIGHTS">&nbsp; Online Rights &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="DISINFO">Disinformation</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="DISINFO">&nbsp; Disinformation &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="ENVIRON">Environment</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="ENVIRON">&nbsp; Environment &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="INTERNATIONAL">International Relations</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="INTERNATIONAL">&nbsp; International Relations &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="TOWNHALLS">Town Halls</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="TOWNHALLS">&nbsp; Town Halls &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="RACISM">Civil Rights and White Nationalism</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="RACISM">&nbsp; Civil Rights and White Nationalism &nbsp;</label>
 	  </div>
 	<div class="form-check form-check-inline">
-          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="NONE">None of the Above</label>
+          <label class="form-check-label"> <input class="form-check-input" type="checkbox" onclick="updateVisibility()" name="NONE">&nbsp; None of the Above &nbsp;</label>
 	  </div>
     <br/>
 	<button class="btn btn-outline-primary btn-sm" onclick="allCheckboxes('issueVisibility',true)">Check all</button>
@@ -192,6 +209,12 @@ function bodyLoaded() {
       </div>
     </fieldset>
   </form>
+</div>
+</div>
+    <div class="col-lg-2">
+      <label id="numItemsShown">Items shown: 0</label>
+    </div>
+</div>
 
 
 <h2>Tue 2017-09-26</h2>
@@ -224,6 +247,6 @@ function bodyLoaded() {
 <div class="gnews timelineEntry rounded" data-topics="17925"> <p><span class="entryTime">05:06PM</span> <span class="gnews">&#x1f4f0; GoogleNews: </span> <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNGQAPTHRfLhwQWJjkHhUhZtqV8Hhg&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=nHPKWYjrE4SWhgG5zI74Dw&url=https://www.courthousenews.com/9th-circuit-nominee-bolster-trumps-immigration-policy/" target="_blank">9th Circuit Nominee Could Bolster Trump's Immigration Policy - Courthouse News Service<br/></a> <br/>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Policing and Criminal Justice</span>, <span class="topic">Sen Merkley</span>) </p>
 </div>
 
-    
+</div>
   </body>
 </html>
