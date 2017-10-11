@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,47 +26,34 @@
       font-style: italic;
       }
       span.tweet {
-      background-color: powderblue;
-      font-weight: bold;
+      background-color: powderblue;   /* font-weight: bold; */
       padding-left: 3px;
       padding-right: 3px;
-      }
-      div.gnews {
-      border-color:  lightgreen;
       }
       span.gnews {
       background-color: palegreen;
-      font-weight: bold;
       padding-left: 3px;
       padding-right: 3px;
-      }
-      div.site {
-      border-color:  lightsalmon;
       }
       span.site {
       background-color: bisque;
-      font-weight: bold;
       padding-left: 3px;
       padding-right: 3px;
       }
-      div.bill {
-      border-color:  mediumorchid;
-      }
       span.bill {
       background-color: plum;
-      font-weight: bold;
       padding-left: 3px;
       padding-right: 3px;
       }
       .topic {
         font-style: italic;
-        background-color: gainsboro;
+        background-color: ghostwhite;
       }
   </style>
 
   <script type="text/javascript">
 
- var topicMask = { "ECONOMIC" : "32", "RON WYDEN SEN" : "4", "ENVIRON" : "128", "NONE" : "8192", "DISINFO" : "16", "TOWNHALLS" : "65536", "INTERNATIONAL" : "2048", "PETER DEFAZIO REP" : "2", "HEALTH" : "512", "POLICING" : "16384", "ELECTORAL" : "64", "JEFF MERKLEY SEN" : "1", "RACISM" : "32768", "ERIGHTS" : "256", "IMMIGRATION" : "1024", "CORRUPTION" : "8", "LGBTQ" : "4096", };
+ var topicMask = { "ELECTORAL" : "64", "PETER DEFAZIO REP" : "2", "NONE" : "8192", "RON WYDEN SEN" : "4", "JEFF MERKLEY SEN" : "1", "ENVIRON" : "128", "RACISM" : "32768", "ECONOMIC" : "32", "HEALTH" : "512", "CORRUPTION" : "8", "LGBTQ" : "4096", "DISINFO" : "16", "TOWNHALLS" : "65536", "ERIGHTS" : "256", "IMMIGRATION" : "1024", "POLICING" : "16384", "INTERNATIONAL" : "2048", };
 
 function allCheckboxes( fsId, isChecked ) {
   let fieldset = document.getElementById(fsId);
@@ -119,10 +107,13 @@ function bodyLoaded() {
   <div class="container">    
 
 
-<h1>Members of Congress / Legislation Activity for the last 31 days</h1>
+<h2>Members of Congress Activity</h2>
+<p>Activity for the last 3 days.<br/>
+Data fetched 2017-10-11 21:05:40.465098+00:00.</p>
 
-  <div class="row visibilityForm ml-2 mr-2">
-    <div class="col-sm-6 col-lg-5">
+<div class="sticky-top">
+  <div class="row visibilityForm pl-2 pr-2">
+    <div class="col-xs-6 col-md-5">
       
      <div class="dropdown">
        <button type="button" class="btn btn-secondary btn-sm dropdown-toggle mt-2 mb-2" data-toggle="dropdown" id="mocDropdownButton" aria-haspopup="true" aria-expanded="false">Select MoCs</button>
@@ -148,7 +139,7 @@ function bodyLoaded() {
 </div>
     </div>
 
-    <div class="col-sm-6 col-lg-5">
+    <div class="col-xs-6 col-md-5">
      <div class="dropdown">
        <button type="button" class="btn btn-secondary btn-sm dropdown-toggle mt-2 mb-2" data-toggle="dropdown" id="issuesDropdownButton" aria-haspopup="true" aria-expanded="false">Select Issues</button>
   <form onsubmit="event.preventDefault();" class="dropdown-menu" aria-labelledby="issuesDropdownButton">
@@ -205,18 +196,1084 @@ function bodyLoaded() {
   </form>
 </div>
 </div>
-    <div class="col-sm-6 col-lg-2">
+    <div class="col-xs-6 col-md-2">
       <label class="mt-2 mb-2" id="numItemsShown">Items shown: 0</label>
     </div>
 </div>
-
-
-<h2>Mon 2017-10-02</h2>
-
-<div class="tweet card border-primary pt-2 mb-4" data-topics="8193"> <div class="card-block"><h6 class="card-subtitle"><span class="entryTime">09:13AM</span> <span class="tweet">&#x1F426; Sen Merkley tweets: </span></h6> <h4 class="card-title"><a href="https://twitter.com/statuses/914886138422231040" target="_blank">When you have weapons of war in wide circulation, you get war-like casualty counts. Not what the Founders had in mind.<br/></a> </h4>  <p>(<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> </div>
 </div>
 
-<div class="gnews card border-success pt-2 mb-4" data-topics="36"> <div class="card-block"> <h6 class="card-subtitle"><span class="entryTime">08:42AM</span> <span class="gnews">&#x1f4f0; GoogleNews: </span></h6> <h4 class=card-title"><a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNHVuIt1nE00ks7-DKRudSLv7DfDAg&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779624626334&ei=YWfSWYCLJpjWqQLQyqWgDQ&url=https://www.bevnet.com/news/spirits/2017/craft-spirits-fet-reduction-bill-reaches-50-co-sponsors-senate/" target="_blank">Craft Spirits FET Reduction Bill Reaches 50 Co-Sponsors in Senate - BevNET.com<br/></a> </h4>  <p>(<span class="topic">Economic Justice and Tax Reform</span>, <span class="topic">Sen Wyden</span>)</p> </div>
+
+ <h3 class="mt-5">Wed 2017-10-11</h3>
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="772"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:48PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNGd7cdkc8LstlJWkK2Ey8-wcIh1bg&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779633642158&ei=A4jeWejXD9fnqALkzYBQ&url=http://www.nationallawjournal.com/home/id%3D1202800188934/Former-Greenberg-Traurig-Partner-Named-as-Acting-HHS-Secretary?mcode%3D1202617074964%26curindex%3D0" target="_blank"> Former Greenberg Traurig Partner Named as Acting HHS Secretary - The National Law Journal<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Online Rights</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_0ca26c9a121789a42115473222e5d504e3cf0d0a6661f03f61" aria-expanded="false" aria-controls="details_0ca26c9a121789a42115473222e5d504e3cf0d0a6661f03f61"> Details  </button>
+</p>
+<div class="collapse" id="details_0ca26c9a121789a42115473222e5d504e3cf0d0a6661f03f61">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGd7cdkc8LstlJWkK2Ey8-wcIh1bg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633642158&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.nationallawjournal.com/home/id%3D1202800188934/Former-Greenberg-Traurig-Partner-Named-as-Acting-HHS-Secretary?mcode%3D1202617074964%26curindex%3D0"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcQWG5d0kSWHgFVI4TdMIAyvzh48yO_E-h1RFx7_3oSvnap8BxBJ0yLcu6tHvpQ0Kp_K7qSRiG98" alt="" border="1" width="80" height="80"><br><font size="-2">The National Law Journal</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGd7cdkc8LstlJWkK2Ey8-wcIh1bg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633642158&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.nationallawjournal.com/home/id%3D1202800188934/Former-Greenberg-Traurig-Partner-Named-as-Acting-HHS-Secretary?mcode%3D1202617074964%26curindex%3D0"><b>Former Greenberg Traurig Partner Named as Acting HHS Secretary</b></a><br><font size="-1"><b><font color="#6f6f6f">The National Law Journal</font></b></font><br><font size="-1"><b>Ron Wyden</b>, D-Oregon, voting against the nominee and urging his colleagues to do likewise, according to a report in The Hill. “I have no reason to believe Mr. Hargan will deviate from Tom Price&#39;s ideological agenda that includes constant sabotage of the <b>...</b></font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNH1dmWK_xKHZQ7ot-3omfIa8spA4g&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633642158&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.fiercehealthcare.com/regulatory/eric-hargan-acting-hhs-secretary-donald-trump-don-j-wright-tom-price">President Trump names Eric Hargan acting HHS secretary</a><font size="-1" color="#6f6f6f"><nobr>FierceHealthcare</nobr></font></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Former Greenberg Traurig Partner Named as Acting HHS Secretary" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="36"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">01:33PM</span> 
+      <span class="tweet">&#x1F426; Sen Wyden tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/918213067686776833" target="_blank"> .@SenBobCasey laying out how Trump & GOP tax plan RAISES taxes for the middle class. Not the tax cuts Trump is clai… https://t.co/LImfF6gq10<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Economic Justice and Tax Reform</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="8194"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">12:56PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNGX_DQWrMFQv6ofTUG80upR2L_JQg&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779634026708&ei=2IfeWZDqMI_JhgGN_oHoDA&url=http://www.ttnews.com/articles/transportation-policymakers-talk-fail-act-infrastructure-defazio-says" target="_blank"> Transportation Policymakers Talk Infrastructure But Fail to Act, DeFazio Says - Transport Topics Online<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Rep DeFazio</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_e772a15c2a890d97ddd5133f060d80af3f7254b15b47f9ee20" aria-expanded="false" aria-controls="details_e772a15c2a890d97ddd5133f060d80af3f7254b15b47f9ee20"> Details  </button>
+</p>
+<div class="collapse" id="details_e772a15c2a890d97ddd5133f060d80af3f7254b15b47f9ee20">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGX_DQWrMFQv6ofTUG80upR2L_JQg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779634026708&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://www.ttnews.com/articles/transportation-policymakers-talk-fail-act-infrastructure-defazio-says"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcRwoQOJXq-qXsd0fVBEs25vFKHMC8ubiwfHIfUUy5f5_k4D2CzDNNbwsjsJzXdC3BYIoT4FbyT5" alt="" border="1" width="80" height="80"><br><font size="-2">Transport Topics Online</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGX_DQWrMFQv6ofTUG80upR2L_JQg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779634026708&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://www.ttnews.com/articles/transportation-policymakers-talk-fail-act-infrastructure-defazio-says"><b>Transportation Policymakers Talk Infrastructure But Fail to Act, <b>DeFazio</b> Says</b></a><br><font size="-1"><b><font color="#6f6f6f">Transport Topics Online</font></b></font><br><font size="-1"><b>Rep</b>. <b>Peter DeFazio</b> (D-Ore.), the Transportation and Infrastructure Committee&#39;s ranking member, stressed that Republican leaders should call up any of the funding proposals on infrastructure that have been introduced this year. DeFazio is among the&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Transportation Policymakers Talk Infrastructure But Fail to Act DeFazio Says" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="2049"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">12:49PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/918202028781981697" target="_blank"> Blowing up the Iran agreement would put America at risk—and not just from Iran. https://t.co/ekUGqVUN9j<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Merkley</span>, <span class="topic">International Relations</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="19650"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">12:05PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNH1EIdzjuqMmqI9Y2gwkEgvmvN50g&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779633959042&ei=2IfeWZDqMI_JhgGN_oHoDA&url=https://www.propublica.org/article/house-democrats-push-tougher-oversight-regulators-conflicts-of-interest" target="_blank"> House Democrats Push for Tougher Oversight of Regulators' Conflicts of Interest - ProPublica<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Voting Rights and Electoral Assurance</span>, <span class="topic">Rep DeFazio</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Policing and Criminal Justice</span>, <span class="topic">Environment</span>, <span class="topic">International Relations</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_8554b4d7b29201b0f1102e88316cde1b4d1afdbecd042c7184" aria-expanded="false" aria-controls="details_8554b4d7b29201b0f1102e88316cde1b4d1afdbecd042c7184"> Details  </button>
+</p>
+<div class="collapse" id="details_8554b4d7b29201b0f1102e88316cde1b4d1afdbecd042c7184">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNH1EIdzjuqMmqI9Y2gwkEgvmvN50g&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633959042&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=https://www.propublica.org/article/house-democrats-push-tougher-oversight-regulators-conflicts-of-interest"><img src="http://t0.gstatic.com/images?q=tbn:ANd9GcRIUVJ5PA1_okqXacV8VtG7r2AJHUSn9DkwIZUbY84sosSoPa_l5LasZnlyY4DydvGAT9YGfz0D" alt="" border="1" width="80" height="80"><br><font size="-2">ProPublica</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNH1EIdzjuqMmqI9Y2gwkEgvmvN50g&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633959042&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=https://www.propublica.org/article/house-democrats-push-tougher-oversight-regulators-conflicts-of-interest"><b>House Democrats Push for Tougher Oversight of Regulators&#39; Conflicts of Interest</b></a><br><font size="-1"><b><font color="#6f6f6f">ProPublica</font></b></font><br><font size="-1">“President Trump ran and campaigned on this idea of draining the swamp,” said the bill&#39;s author, <b>Rep</b>. David Cicilline, D-R.I. “We see, in fact, he has filled the swamp with people who have deep business interests ... John Conyers, Raul Grijalva, Lloyd <b>...</b></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/House Democrats Push for Tougher Oversight of Regulators Conflicts of Interest" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="36650"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">11:55AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNEzW7Ur9t5sJLOu7ynez-4QFpxV3w&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=2IfeWZDqMI_JhgGN_oHoDA&url=http://thehill.com/policy/transportation/354960-democrats-rip-white-house-for-lack-of-infrastructure-plan" target="_blank"> Democrats rip White House for lack of infrastructure plan - The Hill<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Civil Rights and White Nationalism</span>, <span class="topic">Economic Justice and Tax Reform</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Rep DeFazio</span>, <span class="topic">Online Rights</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Transparency and Corruption</span>, <span class="topic">International Relations</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_ddc79232892c8f0373859db3b48114664bf9f7337c2e4f2e84" aria-expanded="false" aria-controls="details_ddc79232892c8f0373859db3b48114664bf9f7337c2e4f2e84"> Details  </button>
+</p>
+<div class="collapse" id="details_ddc79232892c8f0373859db3b48114664bf9f7337c2e4f2e84">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEzW7Ur9t5sJLOu7ynez-4QFpxV3w&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://thehill.com/policy/transportation/354960-democrats-rip-white-house-for-lack-of-infrastructure-plan"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcS4RgVU_1_WponPz54YBpCcxvK5O6vg_JJ6AVZ-ziHI7rwYvm8HQWbsxDpFdCJbozVcMLe0ObKT" alt="" border="1" width="80" height="80"><br><font size="-2">The Hill</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEzW7Ur9t5sJLOu7ynez-4QFpxV3w&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://thehill.com/policy/transportation/354960-democrats-rip-white-house-for-lack-of-infrastructure-plan"><b>Democrats rip White House for lack of infrastructure plan</b></a><br><font size="-1"><b><font color="#6f6f6f">The Hill</font></b></font><br><font size="-1">asked <b>Rep</b>. Brenda Lawrence (D-Mich.). “I do not want another panel of experts talking to me. I want another panel of experts engaging us as we start putting those shovels in the ground.” Lawmakers and stakeholders at the hearing also raised concerns <b>...</b></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Democrats rip White House for lack of infrastructure plan" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">11:26AM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/918180909563764737" target="_blank"> DeVos wants to learn about public education? Wouldn't it be great to have a Sec of Ed who already knew something ab… https://t.co/tU5uYGiFB2<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">10:19AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNGf38c1p-cHum93t_X5EJ3yH0HQ-w&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779633201066&ei=xYfeWeCkE46XhgGssKLYAQ&url=https://www.washingtonpost.com/powerpost/mcconnell-signals-he-will-end-the-practice-of-allowing-senators-to-block-judges/2017/10/11/6a7f80f8-ae9b-11e7-9e58-e6288544af98_story.html" target="_blank"> McConnell signals he will end the practice of allowing senators to block judges - Washington Post<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_d01d7bfad940829670a5740f331c1d9e50cae6e9cd6406effd" aria-expanded="false" aria-controls="details_d01d7bfad940829670a5740f331c1d9e50cae6e9cd6406effd"> Details  </button>
+</p>
+<div class="collapse" id="details_d01d7bfad940829670a5740f331c1d9e50cae6e9cd6406effd">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGf38c1p-cHum93t_X5EJ3yH0HQ-w&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633201066&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=https://www.washingtonpost.com/powerpost/mcconnell-signals-he-will-end-the-practice-of-allowing-senators-to-block-judges/2017/10/11/6a7f80f8-ae9b-11e7-9e58-e6288544af98_story.html"><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcT5q2aw8Z1Lm8z4kp11w60LLi_7xuiAF7G9QISE7MNxbDZQXVjoFpuLX2YB401NxhvbJ_Z1SH1y" alt="" border="1" width="80" height="80"><br><font size="-2">Washington Post</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGf38c1p-cHum93t_X5EJ3yH0HQ-w&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633201066&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=https://www.washingtonpost.com/powerpost/mcconnell-signals-he-will-end-the-practice-of-allowing-senators-to-block-judges/2017/10/11/6a7f80f8-ae9b-11e7-9e58-e6288544af98_story.html"><b>McConnell signals he will end the practice of allowing <b>senators</b> to block judges</b></a><br><font size="-1"><b><font color="#6f6f6f">Washington Post</font></b></font><br><font size="-1"><b>Senate</b> Majority Leader Mitch McConnell has appeared to signal that he will end the long-held practice of giving <b>senators</b> a chance to block judicial nominees who would have jurisdiction over their states — a move that comes as McConnell is facing&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/McConnell signals he will end the practice of allowing senators to block judges" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="8196"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">10:19AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNGf38c1p-cHum93t_X5EJ3yH0HQ-w&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779633201066&ei=A4jeWejXD9fnqALkzYBQ&url=https://www.washingtonpost.com/powerpost/mcconnell-signals-he-will-end-the-practice-of-allowing-senators-to-block-judges/2017/10/11/6a7f80f8-ae9b-11e7-9e58-e6288544af98_story.html" target="_blank"> McConnell signals he will end the practice of allowing senators to block judges - Washington Post<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_6f8c6e59c3d4a0d5cc0a2280e86cc38c446860fd10121b60ce" aria-expanded="false" aria-controls="details_6f8c6e59c3d4a0d5cc0a2280e86cc38c446860fd10121b60ce"> Details  </button>
+</p>
+<div class="collapse" id="details_6f8c6e59c3d4a0d5cc0a2280e86cc38c446860fd10121b60ce">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGf38c1p-cHum93t_X5EJ3yH0HQ-w&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633201066&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://www.washingtonpost.com/powerpost/mcconnell-signals-he-will-end-the-practice-of-allowing-senators-to-block-judges/2017/10/11/6a7f80f8-ae9b-11e7-9e58-e6288544af98_story.html"><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcT5q2aw8Z1Lm8z4kp11w60LLi_7xuiAF7G9QISE7MNxbDZQXVjoFpuLX2YB401NxhvbJ_Z1SH1y" alt="" border="1" width="80" height="80"><br><font size="-2">Washington Post</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGf38c1p-cHum93t_X5EJ3yH0HQ-w&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633201066&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://www.washingtonpost.com/powerpost/mcconnell-signals-he-will-end-the-practice-of-allowing-senators-to-block-judges/2017/10/11/6a7f80f8-ae9b-11e7-9e58-e6288544af98_story.html"><b>McConnell signals he will end the practice of allowing <b>senators</b> to block judges</b></a><br><font size="-1"><b><font color="#6f6f6f">Washington Post</font></b></font><br><font size="-1"><b>Senate</b> Majority Leader Mitch McConnell has appeared to signal that he will end the long-held practice of giving <b>senators</b> a chance to block judicial nominees who would have jurisdiction over their states — a move that comes as McConnell is facing&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/McConnell signals he will end the practice of allowing senators to block judges" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="129"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">10:01AM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/918159575337103360" target="_blank"> #ClimateDisruption is making veggies and grains more like junk food! #TodaysClimateFact https://t.co/mvtu2VhZzr<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Merkley</span>, <span class="topic">Environment</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="16644"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">06:42AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNEvwiDx5_Vnr6dFa4UWrm-uhpUJzw&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779633725592&ei=A4jeWejXD9fnqALkzYBQ&url=https://www.nbcnews.com/think/opinion/congress-can-t-keep-letting-white-house-enforce-secret-laws-ncna808641" target="_blank"> Congress Can't Keep Letting The White House Enforce Secret Laws - NBCNews.com<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Online Rights</span>, <span class="topic">Policing and Criminal Justice</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_e496ec807fb8dd3173c8ccb0e76d62d47068c3fda179227ad3" aria-expanded="false" aria-controls="details_e496ec807fb8dd3173c8ccb0e76d62d47068c3fda179227ad3"> Details  </button>
+</p>
+<div class="collapse" id="details_e496ec807fb8dd3173c8ccb0e76d62d47068c3fda179227ad3">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEvwiDx5_Vnr6dFa4UWrm-uhpUJzw&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633725592&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://www.nbcnews.com/think/opinion/congress-can-t-keep-letting-white-house-enforce-secret-laws-ncna808641"><img src="http://t1.gstatic.com/images?q=tbn:ANd9GcTDquQJA5ZxSGjqUofV7NC4OXcrxKL4WdSz0FsLBUtK2hl70nigapFn0zTGs8ofN11PL2hpSeuv" alt="" border="1" width="80" height="80"><br><font size="-2">NBCNews.com</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEvwiDx5_Vnr6dFa4UWrm-uhpUJzw&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633725592&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://www.nbcnews.com/think/opinion/congress-can-t-keep-letting-white-house-enforce-secret-laws-ncna808641"><b>Congress Can&#39;t Keep Letting The White House Enforce Secret Laws</b></a><br><font size="-1"><b><font color="#6f6f6f">NBCNews.com</font></b></font><br><font size="-1"><b>Senators</b> Rand Paul and <b>Ron Wyden</b>: If nobody knows how many Americans&#39; communications are being searched, we can&#39;t know the full impact on our liberty. by Sen. Rand Paul and Sen. <b>Ron Wyden</b> / Oct.11.2017 / 11:06 AM ET. Participants attend a <b>Senate</b>&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Congress Cant Keep Letting The White House Enforce Secret Laws" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="18692"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">06:38AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNG1tftBfhPuCjDSFgli_BIbvOMNOg&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779632925576&ei=A4jeWejXD9fnqALkzYBQ&url=http://www.zdnet.com/article/us-deputy-attorney-general-just-called-for-responsible-encryption-dont-listen-to-him/" target="_blank"> US deputy attorney general just called for 'responsible encryption.' Don't fall for it. - ZDNet<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">International Relations</span>, <span class="topic">Online Rights</span>, <span class="topic">Policing and Criminal Justice</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_702dc8db17698850f4edaaddc04a3b3d9e54a3e5a3ae763dcb" aria-expanded="false" aria-controls="details_702dc8db17698850f4edaaddc04a3b3d9e54a3e5a3ae763dcb"> Details  </button>
+</p>
+<div class="collapse" id="details_702dc8db17698850f4edaaddc04a3b3d9e54a3e5a3ae763dcb">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNG1tftBfhPuCjDSFgli_BIbvOMNOg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632925576&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.zdnet.com/article/us-deputy-attorney-general-just-called-for-responsible-encryption-dont-listen-to-him/"><img src="http://t0.gstatic.com/images?q=tbn:ANd9GcSHH0MlEkVUNbr3XZmOQBtjqeiXE9SK29uxtaTypiriFhaz7fhpttLn_94DoA4TMio3S0IfzTKx" alt="" border="1" width="80" height="80"><br><font size="-2">ZDNet</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNG1tftBfhPuCjDSFgli_BIbvOMNOg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632925576&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.zdnet.com/article/us-deputy-attorney-general-just-called-for-responsible-encryption-dont-listen-to-him/"><b>US deputy attorney general just called for &#39;responsible encryption.&#39; Don&#39;t fall for it.</b></a><br><font size="-1"><b><font color="#6f6f6f">ZDNet</font></b></font><br><font size="-1">&quot;The last year has made painfully obvious that cybersecurity protections for Americans&#39; personal information is far too weak, in part, thanks to the examples Mr. Rosenstein cited,&quot; said <b>Ron Wyden</b>, a Democratic <b>senator</b> from Oregon and a senior member of <b>...</b></font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNG4Qx3O3spldrjevOZG9JFBiZ0Qhw&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632925576&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://www.voanews.com/a/us-signals-tougher-stance-tech-companies-encryption/4065201.html">US Signals Tougher Stance with Tech Companies on Encryption</a><font size="-1" color="#6f6f6f"><nobr>Voice of America</nobr></font></font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNHjVMKfRtdv5pHGjmGlsiT5KAsRtw&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632925576&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://fcw.com/articles/2017/10/11/doj-responsible-encryption-rosenstein.aspx">DOJ rebrands encryption pitch</a><font size="-1" color="#6f6f6f"><nobr>FCW.com</nobr></font></font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGybFEC54o8HLUCKnC_nc84jAjHAg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632925576&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://www.vpncompare.co.uk/us-deputy-ag-accuses-encryption-of-creating-law-free-zones-and-proposes-responsible-encryption-solution/">US Deputy AG accuses encryption of creating “law-free zones” and proposes “responsible encryption” solution</a><font size="-1" color="#6f6f6f"><nobr>VPNCompare (blog)</nobr></font></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/US deputy attorney general just called for responsible encryption Dont fall for it" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="772"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">05:39AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNFqRfDWcQ6cEcSj3vwhtiF9_LhnOQ&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779632826395&ei=A4jeWejXD9fnqALkzYBQ&url=http://www.wdaz.com/news/4341764-hackers-will-work-government-academia-make-future-elections-secure" target="_blank"> Hackers will work with government, academia to make future elections secure - WDAZ<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Online Rights</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_69b03dd4e40919fb9fcd0727a8b6d32a9f1c4c2cc7c8c53c14" aria-expanded="false" aria-controls="details_69b03dd4e40919fb9fcd0727a8b6d32a9f1c4c2cc7c8c53c14"> Details  </button>
+</p>
+<div class="collapse" id="details_69b03dd4e40919fb9fcd0727a8b6d32a9f1c4c2cc7c8c53c14">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFqRfDWcQ6cEcSj3vwhtiF9_LhnOQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632826395&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.wdaz.com/news/4341764-hackers-will-work-government-academia-make-future-elections-secure"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcRPiLP8-YxXKf4f2tuCvD466cTf5Qkiy6SUYKewm9c0WwMK5RYsz3Qh7ZR6Em-ekzVkxO9vSdYY" alt="" border="1" width="80" height="80"><br><font size="-2">WDAZ</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFqRfDWcQ6cEcSj3vwhtiF9_LhnOQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632826395&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.wdaz.com/news/4341764-hackers-will-work-government-academia-make-future-elections-secure"><b>Hackers will work with government, academia to make future elections secure</b></a><br><font size="-1"><b><font color="#6f6f6f">WDAZ</font></b></font><br><font size="-1">Many people and organizations are working to prevent future election hacking. Democratic <b>Senator Ron Wyden</b> recently sent letters to six top voting machine manufacturers to find out their protocols for preventing hackers from breaking into their systems.</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Hackers will work with government academia to make future elections secure" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="385"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">01:45AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNFHbMCIPRR7j3azefvaJh9T-6xXxQ&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779630455031&ei=xYfeWeCkE46XhgGssKLYAQ&url=http://www.ktvz.com/news/merkley-blasts-epa-clean-power-plan-rollback-moves/635976253" target="_blank"> Merkley blasts EPA Clean Power Plan rollback moves - KTVZ<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Merkley</span>, <span class="topic">Online Rights</span>, <span class="topic">Environment</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_356ff58defb257c403a92f385f7864bdf86ed154f9871f6409" aria-expanded="false" aria-controls="details_356ff58defb257c403a92f385f7864bdf86ed154f9871f6409"> Details  </button>
+</p>
+<div class="collapse" id="details_356ff58defb257c403a92f385f7864bdf86ed154f9871f6409">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFHbMCIPRR7j3azefvaJh9T-6xXxQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779630455031&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=http://www.ktvz.com/news/merkley-blasts-epa-clean-power-plan-rollback-moves/635976253"><b><b>Merkley</b> blasts EPA Clean Power Plan rollback moves</b></a><br><font size="-1"><b><font color="#6f6f6f">KTVZ</font></b></font><br><font size="-1">WASHINGTON - <b>Senator Jeff Merkley</b> released the following statement after the Environmental Protection Agency, acting under orders from President Donald Trump and EPA Administrator Scott Pruitt, officially began the process of rolling back the Clean&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Merkley blasts EPA Clean Power Plan rollback moves" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="2182"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">11:26PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNHmx-4QEWsEz4xG9goc4Gg7vDS0wQ&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=2IfeWZDqMI_JhgGN_oHoDA&url=http://www.currypilot.com/news/5662745-151/congressmans-call-to-review-mining-ban-draws-fire" target="_blank"> Congressman's call to review mining ban draws fire - Curry Coastal Pilot<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Rep DeFazio</span>, <span class="topic">Environment</span>, <span class="topic">Sen Wyden</span>, <span class="topic">International Relations</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_c745500b19ec1e90c7e94e9a4d34f87061e4d1ef87c8970cfd" aria-expanded="false" aria-controls="details_c745500b19ec1e90c7e94e9a4d34f87061e4d1ef87c8970cfd"> Details  </button>
+</p>
+<div class="collapse" id="details_c745500b19ec1e90c7e94e9a4d34f87061e4d1ef87c8970cfd">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNHmx-4QEWsEz4xG9goc4Gg7vDS0wQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://www.currypilot.com/news/5662745-151/congressmans-call-to-review-mining-ban-draws-fire"><img src="http://t0.gstatic.com/images?q=tbn:ANd9GcRkmFr1KGWVQWXGwo8sYczhMm-8MBcJfW68m8vZVnt4sfWg-CqacdCbnYo_P84Uc462reYkDC2X" alt="" border="1" width="80" height="80"><br><font size="-2">Curry Coastal Pilot</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNHmx-4QEWsEz4xG9goc4Gg7vDS0wQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://www.currypilot.com/news/5662745-151/congressmans-call-to-review-mining-ban-draws-fire"><b><b>Congressman&#39;s</b> call to review mining ban draws fire</b></a><br><font size="-1"><b><font color="#6f6f6f">Curry Coastal Pilot</font></b></font><br><font size="-1">“This is an egregious overstep by Washington, driven by special interests,” U.S. <b>Rep</b>. <b>Peter DeFazio</b> said in a letter to the Interior and Agriculture department secretaries. “The prohibition on mining on the Smith River and the headwaters of Hunter <b>...</b></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Congressmans call to review mining ban draws fire" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+ <h3 class="mt-5">Tue 2017-10-10</h3>
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="17156"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">04:38PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNFlKP8boebktkKpyb_e79sAkaMw1g&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779633117216&ei=A4jeWejXD9fnqALkzYBQ&url=http://www.wweek.com/news/2017/10/10/wyden-demands-answers-to-justice-department-investigations-of-journalists/" target="_blank"> Ron Wyden Demands Answers to Justice Department Investigations ... - Willamette Week<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Online Rights</span>, <span class="topic">Policing and Criminal Justice</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_0aac1d6e55d6301c2a6772e09d961746540f8fd707ee9b2575" aria-expanded="false" aria-controls="details_0aac1d6e55d6301c2a6772e09d961746540f8fd707ee9b2575"> Details  </button>
+</p>
+<div class="collapse" id="details_0aac1d6e55d6301c2a6772e09d961746540f8fd707ee9b2575">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFlKP8boebktkKpyb_e79sAkaMw1g&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633117216&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.wweek.com/news/2017/10/10/wyden-demands-answers-to-justice-department-investigations-of-journalists/"><img src="http://t0.gstatic.com/images?q=tbn:ANd9GcSqOD5e_Krh8-snyJGzeSBlpkzygdf-z9vgzSwt815_EPOmL8DUg2C3AOrbvMZtJwQNdPDBv86F" alt="" border="1" width="80" height="80"><br><font size="-2">Willamette Week</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFlKP8boebktkKpyb_e79sAkaMw1g&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633117216&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.wweek.com/news/2017/10/10/wyden-demands-answers-to-justice-department-investigations-of-journalists/"><b>Ron Wyden Demands Answers to Justice Department Investigations ...</b></a><br><font size="-1"><b><font color="#6f6f6f">Willamette Week</font></b></font><br><font size="-1">The Oregon senator asks DOJ to further restrict its own ability to target journalists in leak investigations. U.S. Sen Ron Wyden at a rally to save Obamacare on&nbsp;...</font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEOx6fsv1RFZqGyGU5pHphXlAa2vA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633117216&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://registerguard.com/rg/opinion/36040261-78/the-last-of-the-bipartisans.html.csp">The last of the bipartisans? | Opinion | Eugene, Oregon</a><font size="-1" color="#6f6f6f"><nobr>The Register-Guard</nobr></font></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Ron Wyden Demands Answers to Justice Department Investigations " target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">04:24PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917893695654985728" target="_blank"> Powerful meeting with Muslim and Rohingya leaders in Oregon to discuss escalating crisis in Burma. Burma must cease… https://t.co/YEZn1oJFPz<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="site timelineEntry card border-warning pt-2 mb-4" data-topics="81922"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">04:16PM</span> 
+      <span class="site">&#x1F4C4; From Rep DeFazio: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://www.defazioforcongress.org/2017/10/10/lte-i-applaud-defazios-turn-around/" target="_blank"> LTE: I applaud DeFazio's turn-around<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Rep DeFazio</span>, <span class="topic">Town Halls</span>, <span class="topic">Policing and Criminal Justice</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-warning btn-sm" type="button" data-toggle="collapse" data-target="#details_638716e1c8d355e1f62c13b70d08cdefa7b9de2f3732b2fd11" aria-expanded="false" aria-controls="details_638716e1c8d355e1f62c13b70d08cdefa7b9de2f3732b2fd11"> Details  </button>
+</p>
+<div class="collapse" id="details_638716e1c8d355e1f62c13b70d08cdefa7b9de2f3732b2fd11">
+<p>I’m aghast at what happened in Las Vegas, more so because it was on the day of the second anniversary of the tragedy at Umpqua Community College.</p>
+<p>Mass shootings remind us that it is critical we continue the conversation about enacting strong and effective gun regulations that will protect us from assault weapons, gun silencers, armor piercing bullets and weak gun laws that allow anyone to purchase and carry any firearm anywhere.</p>
+<p>When Congressman Peter DeFazio held a town hall meeting in Florence, I questioned him about his position on the Hearing Protection Bill. He was one of four Democrats to co-sponsor the bill along with Rep. Greg Walden and 162 Republicans.</p>
+<p>Now we have the Sportsman’s Heritage and Recreational Enhancement (SHARE) Act before the House. This bill contains several NRA-backed provisions, including one to eliminate regulations for silencers. Silencers were not designed to protect hearing, but to disguise the sound of gunfire. With silencers, gunfire ­becomes much harder to identify, law enforcement’s ability to swiftly respond to shootings is impeded, and the number of casualties is significantly increased.</p>
+<p>In the wake of last week’s tragedy, DeFazio rethought his position and rebuked the SHARE Act altogether. To his credit, he withdrew his co-sponsorship of the Hearing Protection Bill. In his speech before the House, he made some strong requests for gun violence review and legislation. I applaud and thank Congressman DeFazio for his courageous stand against gun violence and ask his constituents do the same.</p>
+<p>MICHAEL ALLEN
+Florence</p>
+<p>Read more: <a href="http://registerguard.com/rg/opinion/36036112-78/applaud-defazios-turnaround.html.csp">registerguard.org</a></p>
+
+</div>
+
+  </div>
+</div>
+
+
+<div class="site timelineEntry card border-warning pt-2 mb-4" data-topics="8197"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">03:27PM</span> 
+      <span class="site">&#x1F4C4; From Sen Merkley (press release): </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://www.merkley.senate.gov/news/press-releases/merkley-wyden-announce-rural-development-grants-for-small-businesses" target="_blank"> Merkley, Wyden Announce Rural Development Grants for Small Businesses<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="site timelineEntry card border-warning pt-2 mb-4" data-topics="129"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">03:07PM</span> 
+      <span class="site">&#x1F4C4; From Sen Merkley (press release): </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://www.merkley.senate.gov/news/press-releases/merkley-trump-pruitt-climate-denial-wont-stop-hurricanes-wildfires-and-drought" target="_blank"> Merkley: Trump-Pruitt Climate Denial Won't Stop Hurricanes, Wildfires, and Drought<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Merkley</span>, <span class="topic">Environment</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="3076"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">03:01PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNEVvaSVhri_X0r6lp2r9xAINbx3tA&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779632824701&ei=A4jeWejXD9fnqALkzYBQ&url=http://www.washingtontimes.com/news/2017/oct/10/wyden-asks-sessions-details-leak-probes-targeting-/" target="_blank"> Sen. Wyden asks Sessions for details on leak probes targeting journalists - Washington Times<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">International Relations</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_0c9a78cdd443ad0f2e7f7fd157321e23a3e70dddb92b4e1a5c" aria-expanded="false" aria-controls="details_0c9a78cdd443ad0f2e7f7fd157321e23a3e70dddb92b4e1a5c"> Details  </button>
+</p>
+<div class="collapse" id="details_0c9a78cdd443ad0f2e7f7fd157321e23a3e70dddb92b4e1a5c">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEVvaSVhri_X0r6lp2r9xAINbx3tA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632824701&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.washingtontimes.com/news/2017/oct/10/wyden-asks-sessions-details-leak-probes-targeting-/"><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcSFJebV55D9FpuLuzT-Bx2qDFCusMcv7J1QqtXwiKiSSXoAzvSal4JQQryfQ6dIu8weqqqIBFmX" alt="" border="1" width="80" height="80"><br><font size="-2">Washington Times</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEVvaSVhri_X0r6lp2r9xAINbx3tA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632824701&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.washingtontimes.com/news/2017/oct/10/wyden-asks-sessions-details-leak-probes-targeting-/"><b>Sen. <b>Wyden</b> asks Sessions for details on leak probes targeting journalists</b></a><br><font size="-1"><b><font color="#6f6f6f">Washington Times</font></b></font><br><font size="-1">The Trump administration&#39;s promised crackdown against leaks has the ranking Democrat on the <b>Senate</b> Finance Committee demanding answers from the Justice Department about the government&#39;s rules for investigating reporters covering unauthorized <b>...</b></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Sen Wyden asks Sessions for details on leak probes targeting journalists" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="129"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:40PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917867415039545344" target="_blank"> From OR to CA #wildfires, it’s all too clear: we need more funds to help communities recover and make our forests more resistant to fire.<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Merkley</span>, <span class="topic">Environment</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:37PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917866602753863680" target="_blank"> My heart breaks for those who lost their lives & for all impacted by catastrophic CA fires. Grateful for brave fire… https://t.co/32y2bsel5H<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="129"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:33PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917865580954255360" target="_blank"> RT @MerrittPaulson: Today's NYT: CA wildfires story next to @ScottPruittOK and his "EPA" plan to repeal carbon reduction plans. Beyond sad/…<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Merkley</span>, <span class="topic">Environment</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8196"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:05PM</span> 
+      <span class="tweet">&#x1F426; Sen Wyden tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917858703650508800" target="_blank"> Who benefits from the GOP’s giveaway? Big coal.<br/><br/>Who gets hurt? Your wallet.<br/><br/>A winning equation only for Big Coal & GOP fundraisers.<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8196"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:04PM</span> 
+      <span class="tweet">&#x1F426; Sen Wyden tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917858503108284418" target="_blank"> Another corporate giveaway in the works by Trump & GOP– this proposal will raise utility rates for American families https://t.co/EWfhMFfyuj<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">01:45PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917853496145272838" target="_blank"> @realDonaldTrump @EPAScottPruitt It’s an assault on clean air, a safe environment, & our kids’ health, one that is… https://t.co/qobivsPKVa<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">01:40PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917852296997998592" target="_blank"> .@RealDonaldTrump & @EPAScottPruitt’s attack on the #CleanPowerPlan is an embarrassment to our nation. It’s a faceplant on the world stage.<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="130"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">12:56PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNEjS1hiVqX0X6FRWDn93d680ryWcQ&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=2IfeWZDqMI_JhgGN_oHoDA&url=https://cei.org/blog/house-members-repeat-false-claims-about-passenger-facility-charges" target="_blank"> House Members Repeat False Claims about Passenger Facility Charges - Competitive Enterprise Institute (blog)<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Rep DeFazio</span>, <span class="topic">Environment</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_852bcfb2b082665d5dd14af6ed7bc777fde37e10b30275d9b7" aria-expanded="false" aria-controls="details_852bcfb2b082665d5dd14af6ed7bc777fde37e10b30275d9b7"> Details  </button>
+</p>
+<div class="collapse" id="details_852bcfb2b082665d5dd14af6ed7bc777fde37e10b30275d9b7">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEjS1hiVqX0X6FRWDn93d680ryWcQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=https://cei.org/blog/house-members-repeat-false-claims-about-passenger-facility-charges"><img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQawOtkEWM-X320BHgtIiODgiAiphN5p3tGUOoY0aG3Fazb4HgCNOutT_04utCnVSlfJEgqS5GH" alt="" border="1" width="80" height="80"><br><font size="-2">Competitive Enterprise Institute (blog)</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEjS1hiVqX0X6FRWDn93d680ryWcQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=https://cei.org/blog/house-members-repeat-false-claims-about-passenger-facility-charges"><b>House Members Repeat False Claims about Passenger Facility Charges</b></a><br><font size="-1"><b><font color="#6f6f6f">Competitive Enterprise Institute (blog)</font></b></font><br><font size="-1">On September 28, twenty House members, led by <b>Rep</b>. Jason Lewis (R-MN), ... <b>Peter DeFazio</b> (D-OR) and Thomas Massie (R-KY), that would eliminate the PFC cap entirely and reduce federal micromanagement of airport funding and financing decisions.</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/House Members Repeat False Claims about Passenger Facility Charges" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">12:30PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917834643956740096" target="_blank"> By reversing the #CleanPowerPlan, @realDonaldTrump is trading a fictional “war on coal” for a very real war on our nation’s public health.<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="129"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">12:28PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917834286509772800" target="_blank"> #CleanPowerPlan would prevent 3.6k premature deaths, 90k kid asthma attacks & 1.7k heart attacks. #TodaysClimateFact https://t.co/TUn5jvqbtn<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Merkley</span>, <span class="topic">Environment</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="130"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">09:31AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNFJJW7rfvyQJlH3WMj1s_poJBCm3A&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=2IfeWZDqMI_JhgGN_oHoDA&url=http://www.oregonlive.com/opinion/index.ssf/2017/10/finding_balance_between_conser.html" target="_blank"> Finding balance between conservation and economic growth: Guest opinion - OregonLive.com<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Rep DeFazio</span>, <span class="topic">Environment</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_7fa4ba885c4129c21c9dfdda3db1982f8aed16ca103a15586a" aria-expanded="false" aria-controls="details_7fa4ba885c4129c21c9dfdda3db1982f8aed16ca103a15586a"> Details  </button>
+</p>
+<div class="collapse" id="details_7fa4ba885c4129c21c9dfdda3db1982f8aed16ca103a15586a">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFJJW7rfvyQJlH3WMj1s_poJBCm3A&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://www.oregonlive.com/opinion/index.ssf/2017/10/finding_balance_between_conser.html"><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcSyc9j9ocPUfafJhodBiVytavRgw8XsWS6peCXRKronnUMPcF7EELxhnsxGS91mwNGiAvg5YRnu" alt="" border="1" width="80" height="80"><br><font size="-2">OregonLive.com</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFJJW7rfvyQJlH3WMj1s_poJBCm3A&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://www.oregonlive.com/opinion/index.ssf/2017/10/finding_balance_between_conser.html"><b>Finding balance between conservation and economic growth: Guest opinion</b></a><br><font size="-1"><b><font color="#6f6f6f">OregonLive.com</font></b></font><br><font size="-1">OHSU&#39;s Knight Cancer Institute building is under construction in the South Waterfront area. <b>Rep</b>. <b>Peter DeFazio</b> warns that new regulations stemming from an environmental lawsuit could negatively affect new development in that area along the Willamette&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Finding balance between conservation and economic growth Guest opinion" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="53161"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">08:00AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNEJUZEOATYFh2ZGUEICt7XZ48L7XA&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779632689261&ei=xYfeWeCkE46XhgGssKLYAQ&url=http://thehill.com/opinion/white-house/354680-a-lesson-on-abuse-of-power-by-obama-and-his-senate-allies" target="_blank"> A lesson on abuse of power by Obama and his Senate allies | TheHill - The Hill<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Civil Rights and White Nationalism</span>, <span class="topic">Economic Justice and Tax Reform</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Policing and Criminal Justice</span>, <span class="topic">Online Rights</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Sen Merkley</span>, <span class="topic">Transparency and Corruption</span>, <span class="topic">Environment</span>, <span class="topic">International Relations</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_68a83e778362d3ac603dd3d666d73a73852b8ec9898c6412b0" aria-expanded="false" aria-controls="details_68a83e778362d3ac603dd3d666d73a73852b8ec9898c6412b0"> Details  </button>
+</p>
+<div class="collapse" id="details_68a83e778362d3ac603dd3d666d73a73852b8ec9898c6412b0">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEJUZEOATYFh2ZGUEICt7XZ48L7XA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632689261&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=http://thehill.com/opinion/white-house/354680-a-lesson-on-abuse-of-power-by-obama-and-his-senate-allies"><img src="http://t1.gstatic.com/images?q=tbn:ANd9GcR6G9iLz9twwRafeJm2Q-A1eNRLiKt25FfDtj4MHaPSTnRnoDXXCWpfLUEg3S2fjMc17uQICd23" alt="" border="1" width="80" height="80"><br><font size="-2">The Hill</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEJUZEOATYFh2ZGUEICt7XZ48L7XA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632689261&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=http://thehill.com/opinion/white-house/354680-a-lesson-on-abuse-of-power-by-obama-and-his-senate-allies"><b>A lesson on abuse of power by Obama and his Senate allies | TheHill</b></a><br><font size="-1"><b><font color="#6f6f6f">The Hill</font></b></font><br><font size="-1">Republicans on Capitol Hill are outraged by the announcement that the Department of Justice would stick with the Obama administration decision not to&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/A lesson on abuse of power by Obama and his Senate allies  TheHill" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="3881"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">03:06AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNH-GSCJXmp4kgGVjRpND5z-7qn1UA&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779633756719&ei=xYfeWeCkE46XhgGssKLYAQ&url=http://www.politico.com/story/2017/10/10/democrats-senate-majority-2018-path-243533" target="_blank"> Democrats see path to Senate majority in 2018 - POLITICO - Politico<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Economic Justice and Tax Reform</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Online Rights</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Sen Merkley</span>, <span class="topic">Transparency and Corruption</span>, <span class="topic">International Relations</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_e1b74e4e75c91bf9df2a2d0a0e8703b0aada5247787ab71d92" aria-expanded="false" aria-controls="details_e1b74e4e75c91bf9df2a2d0a0e8703b0aada5247787ab71d92"> Details  </button>
+</p>
+<div class="collapse" id="details_e1b74e4e75c91bf9df2a2d0a0e8703b0aada5247787ab71d92">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNH-GSCJXmp4kgGVjRpND5z-7qn1UA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633756719&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=http://www.politico.com/story/2017/10/10/democrats-senate-majority-2018-path-243533"><img src="http://t0.gstatic.com/images?q=tbn:ANd9GcQbM2Mn2ImbOkDQIIMOAJ7MEUFsiq62NR7sdWsHWHyN2CpB65UYjqbI1WC8TAvjTWJ6W_DoxG8" alt="" border="1" width="80" height="80"><br><font size="-2">Politico</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNH-GSCJXmp4kgGVjRpND5z-7qn1UA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633756719&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=http://www.politico.com/story/2017/10/10/democrats-senate-majority-2018-path-243533"><b>Democrats see path to Senate majority in 2018 - POLITICO</b></a><br><font size="-1"><b><font color="#6f6f6f">Politico</font></b></font><br><font size="-1">The odds remain long for a takeover, but Republicans are still growing concerned.</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Democrats see path to Senate majority in " target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="65540"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">12:00AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNHQ93J8ruh7AE3lbSPYPkYF0twcLQ&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=A4jeWejXD9fnqALkzYBQ&url=http://www.argusobserver.com/news/senator-plans-town-hall-in-nyssa/article_a5b2a2d6-abda-11e7-bbc8-e3bc9fbfaaa3.html" target="_blank"> Senator plans town hall in Nyssa - Ontario Argus Observer<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Town Halls</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_6800471307674a615086b42809dd35e3b2aed404a0848a44c1" aria-expanded="false" aria-controls="details_6800471307674a615086b42809dd35e3b2aed404a0848a44c1"> Details  </button>
+</p>
+<div class="collapse" id="details_6800471307674a615086b42809dd35e3b2aed404a0848a44c1">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNHQ93J8ruh7AE3lbSPYPkYF0twcLQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.argusobserver.com/news/senator-plans-town-hall-in-nyssa/article_a5b2a2d6-abda-11e7-bbc8-e3bc9fbfaaa3.html"><img src="http://t1.gstatic.com/images?q=tbn:ANd9GcTGWAegyI_glVZHALNwam2DSmjhImQtBmldiwy7-V_oQYa5NqsDr7jL1FIZmki9ZVIgZ3BsLDhG" alt="" border="1" width="80" height="80"><br><font size="-2">Ontario Argus Observer</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNHQ93J8ruh7AE3lbSPYPkYF0twcLQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.argusobserver.com/news/senator-plans-town-hall-in-nyssa/article_a5b2a2d6-abda-11e7-bbc8-e3bc9fbfaaa3.html"><b><b>Senator</b> plans town hall in Nyssa</b></a><br><font size="-1"><b><font color="#6f6f6f">Ontario Argus Observer</font></b></font><br><font size="-1">NYSSA — U.S. Sen. <b>Ron Wyden</b>, D-Ore., will hold four town halls throughout Oregon counties this week, including this week in Malheur, Baker, Union and Wasco. Wyden&#39;s town halls on Oct. 12-13 will mark 73 town halls he has held so far in 2017, the most&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Senator plans town hall in Nyssa" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="16581"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">09:29PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNH4-AcSyR4ORONdAQ0R0z7ttGR4UQ&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779632076821&ei=xYfeWeCkE46XhgGssKLYAQ&url=http://katu.com/news/local/ore-congressmen-talk-with-brenda-tracy-about-changes-to-campus-sex-assault-investigations" target="_blank"> Brenda Tracy talks with Oregon senators on changes to campus sex assault investigations - KATU<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Voting Rights and Electoral Assurance</span>, <span class="topic">Sen Merkley</span>, <span class="topic">Environment</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Policing and Criminal Justice</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_aaa636c9720cf7f88e8364cb0c7430e962abd3d75a54abc6d0" aria-expanded="false" aria-controls="details_aaa636c9720cf7f88e8364cb0c7430e962abd3d75a54abc6d0"> Details  </button>
+</p>
+<div class="collapse" id="details_aaa636c9720cf7f88e8364cb0c7430e962abd3d75a54abc6d0">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNH4-AcSyR4ORONdAQ0R0z7ttGR4UQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632076821&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=http://katu.com/news/local/ore-congressmen-talk-with-brenda-tracy-about-changes-to-campus-sex-assault-investigations"><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTr1r8t-i7PAxJc1jr2qllPx8RSWr-jPREmhKYr4Ang-IDxxc9yLg4CwarBOSZKLNcOyfR5fbY8" alt="" border="1" width="80" height="80"><br><font size="-2">KATU</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNH4-AcSyR4ORONdAQ0R0z7ttGR4UQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779632076821&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=http://katu.com/news/local/ore-congressmen-talk-with-brenda-tracy-about-changes-to-campus-sex-assault-investigations"><b>Brenda Tracy talks with Oregon <b>senators</b> on changes to campus sex assault investigations</b></a><br><font size="-1"><b><font color="#6f6f6f">KATU</font></b></font><br><font size="-1"><b>Jeff Merkley</b> and Ron Wyden at Portland State University on Monday to address the department&#39;s changes. Tracy accuses the Trump administration of creating a hostile environment for sexual assault victims. She says it will be more difficult for survivors <b>...</b></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Brenda Tracy talks with Oregon senators on changes to campus sex assault investigations" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="bill timelineEntry card border-info pt-2 mb-4" data-topics="8192"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">09:00PM</span> 
+      <span class="bill">&#x1F4DC; Activity on bill: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://legiscan.com/US/bill/HB1858/2017" target="_blank"> Bill HB1858: "To designate the facility of the United States Postal Service located at 4514 Williamson Trail in Liberty, Pennsylvania, as the "Staff Sergeant Ryan Scott Ostrom Post Office"."<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-info btn-sm" type="button" data-toggle="collapse" data-target="#details_7819267926e71b3722a43a8449482c820519b0817bc431593b" aria-expanded="false" aria-controls="details_7819267926e71b3722a43a8449482c820519b0817bc431593b"> Details  </button>
+</p>
+<div class="collapse" id="details_7819267926e71b3722a43a8449482c820519b0817bc431593b">
+<p>
+--  VOTE ON 2017-10-10 PASSED:<br/>
+--    Earl Blumenauer voted Yea<br/>
+--    Peter DeFazio voted Yea<br/>
+--    Kurt Schrader voted Yea<br/>
+--    Greg Walden voted NV<br/>
+--    Suzanne Bonamici voted Yea<br/>
+</p>
+</div>
+
+  </div>
+</div>
+
+
+<div class="bill timelineEntry card border-info pt-2 mb-4" data-topics="18436"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">09:00PM</span> 
+      <span class="bill">&#x1F4DC; Activity on bill: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://legiscan.com/US/bill/SB1595/2017" target="_blank"> Bill SB1595: "Hizballah International Financing Prevention Amendments Act of 2017"<br/>-- (Co)Sponsored by: Ron Wyden<br/>-- On 2017-10-10: Held at the desk.
+<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Policing and Criminal Justice</span>, <span class="topic">International Relations</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">07:13PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917573778045054983" target="_blank"> 26.2 miles in 2:09:20 — OR's @G_Rupp is incredible! Congrats on winning the #ChicagoMarathon — 1st American to win… https://t.co/9pQjGxQvh1<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="16900"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">06:48PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNG4yGHWLSZs3LjF2UKLjLlF-Fj3rQ&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779628792571&ei=A4jeWejXD9fnqALkzYBQ&url=http://www.palestineherald.com/news/senate-panel-extends-chip-funding/article_9b9193f0-ad53-11e7-9866-d77a5da470af.html" target="_blank"> Senate panel extends CHIP funding - Palestine Herald Press<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Policing and Criminal Justice</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_67d652fcf5df03f88f8a71fb0816f9327955fe44f4b4eeb570" aria-expanded="false" aria-controls="details_67d652fcf5df03f88f8a71fb0816f9327955fe44f4b4eeb570"> Details  </button>
+</p>
+<div class="collapse" id="details_67d652fcf5df03f88f8a71fb0816f9327955fe44f4b4eeb570">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNG4yGHWLSZs3LjF2UKLjLlF-Fj3rQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779628792571&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.palestineherald.com/news/senate-panel-extends-chip-funding/article_9b9193f0-ad53-11e7-9866-d77a5da470af.html"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcTSbUmCykk_govnSJ_JbXFSVg_i4d9uKOlio_aDPK_BYMqRiZpvT3Vl59qNU5Yz3Cqf0pzh7Ks-" alt="" border="1" width="80" height="80"><br><font size="-2">Palestine Herald Press</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNG4yGHWLSZs3LjF2UKLjLlF-Fj3rQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779628792571&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.palestineherald.com/news/senate-panel-extends-chip-funding/article_9b9193f0-ad53-11e7-9866-d77a5da470af.html"><b><b>Senate</b> panel extends CHIP funding</b></a><br><font size="-1"><b><font color="#6f6f6f">Palestine Herald Press</font></b></font><br><font size="-1">The bipartisan <b>Senate</b> funding bill was negotiated in the <b>Senate</b> Finance Committee by Republican chairman Orrin Hatch of Utah and the panel&#39;s top Democrat, <b>Ron Wyden</b> of Oregon. It would fund the program for five years, with the amount declining after <b>...</b></font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGHT88JlBO5NJQTfpRnLGigp19JVA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779628792571&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://healthpayerintelligence.com/news/senate-to-vote-on-funding-chip-for-five-additional-years"><b>Senate</b> to Vote on Funding CHIP for Five Additional Years</a><font size="-1" color="#6f6f6f"><nobr>HealthPayerIntelligence.com</nobr></font></font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFR1SYO7-W9X5x5bid2nTV6-Jj-xA&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779628792571&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.statesmanjournal.com/story/opinion/editorials/2017/10/07/tell-congress-communities-benefit-most-family-programs/728060001/">Tell Congress communities benefit most from family programs</a><font size="-1" color="#6f6f6f"><nobr>Statesman Journal</nobr></font></font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNG6vbgmqwzFVUEZ4u-vfdsT8gXJLw&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779628792571&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://www.vice.com/en_us/article/pak4k7/congress-is-so-incompetent-it-cant-fund-health-insurance-for-kids">Congress Is So Incompetent It Can&#39;t Fund Health Insurance for Kids</a><font size="-1" color="#6f6f6f"><nobr>VICE</nobr></font></font><br><font size="-1" class="p"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEfWMMoVCoygUIZq3CcCLPJQgj7hw&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779628792571&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.post-gazette.com/news/health/2017/10/08/States-scramble-to-overcome-Congress-failure-to-move-on-children-s-health-program/stories/201710080198"><nobr>Pittsburgh Post-Gazette</nobr></a>&nbsp;-<a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGYGSIeLM_zpdzYhd9B2xP8swflIw&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779628792571&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://www.nytimes.com/2017/10/04/us/politics/children-health-insurance-program-congress.html"><nobr>New York Times</nobr></a></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Senate panel extends CHIP funding" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">06:45PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917566823775854592" target="_blank"> As we honor tribes today, we must also address the fact that @IHSgov is drastically underfunded & Native American health suffers as a result<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="513"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">06:36PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917564497585364992" target="_blank"> On #IndigenousPeoplesDay, I met w/ tribal leaders to address the dire need for more Native American health care fun… https://t.co/MqzcQWwIU8<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="129"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">06:09PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917557649625026560" target="_blank"> @EPAScottPruitt US must display bold leadership in tackling #climatedisruption, not shameful obstruction.I'll do ev… https://t.co/TkNkYfp3Hl<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Merkley</span>, <span class="topic">Environment</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">06:06PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917557029505519617" target="_blank"> @EPAScottPruitt #CleanAirAct has both strengthened our economy and protected our health. Dangerous air pollutants h… https://t.co/eC6RKdVYuU<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">05:31PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917548184037191680" target="_blank"> By reversing the #CleanPowerPlan, @EPAScottPruitt yet again disturbingly shows us his true priorities: Polluters fi… https://t.co/tl66fzz8CA<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="1668"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">05:14PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNGuBM2vGYIgmsFrW6iD5Lzq2fDXwQ&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779630718898&ei=A4jeWejXD9fnqALkzYBQ&url=http://www.capradio.org/articles/2017/10/09/feinstein-announces-she-will-run-for-fifth-term/" target="_blank"> Feinstein Announces She Will Run For Fifth Term - Capital Public Radio News<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">Immigration and Refugees</span>, <span class="topic">Environment</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_59b4a19845876db636fd0107f75a5ff80bce982f0f700a85c6" aria-expanded="false" aria-controls="details_59b4a19845876db636fd0107f75a5ff80bce982f0f700a85c6"> Details  </button>
+</p>
+<div class="collapse" id="details_59b4a19845876db636fd0107f75a5ff80bce982f0f700a85c6">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGuBM2vGYIgmsFrW6iD5Lzq2fDXwQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779630718898&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.capradio.org/articles/2017/10/09/feinstein-announces-she-will-run-for-fifth-term/"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcTeYpB_7leNQDCS0xPX_LEIzqTci1iYfFYoYQcUyxInGTUFbuQrBfab2_b34ol-zY3C7xjsp0oH" alt="" border="1" width="80" height="80"><br><font size="-2">Capital Public Radio News</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNGuBM2vGYIgmsFrW6iD5Lzq2fDXwQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779630718898&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=http://www.capradio.org/articles/2017/10/09/feinstein-announces-she-will-run-for-fifth-term/"><b>Feinstein Announces She Will Run For Fifth Term</b></a><br><font size="-1"><b><font color="#6f6f6f">Capital Public Radio News</font></b></font><br><font size="-1">Some high-profile Democratic politicians quickly endorsed Feinstein, including Sen. Kamala Harris and Lieutenant Governor Gavin Newsom. But others are less-enthused about the 84-year-old <b>senator</b> pursuing another six years in Washington. Silicon Valley&nbsp;...</font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFzaJkBPhDUDnKnEccO2NfqmyQuYQ&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779630718898&amp;ei=A4jeWejXD9fnqALkzYBQ&amp;url=https://twitter.com/DianneFeinstein/status/917389235145117696">Dianne Feinstein on Twitter: &quot;I am running for reelection to the Senate. Lots more to do: ending gun violence ...</a><font size="-1" color="#6f6f6f"><nobr>Twitter</nobr></font></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Feinstein Announces She Will Run For Fifth Term" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8197"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">05:09PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917542501770285056" target="_blank"> @RonWyden @brendatracy24 We must push back against @BetsyDeVosED's terrible decision. No one should have to fear fo… https://t.co/665aMA4kwO<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8197"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">05:00PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917540190482255872" target="_blank"> DeVos' move to undermine rights for college sexual assault victims is despicable. Joined @RonWyden @brendatracy24 t… https://t.co/Ahzzv3Q4lI<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+ <h3 class="mt-5">Mon 2017-10-09</h3>
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">04:24PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917531145595768832" target="_blank"> @realDonaldTrump .@realDonaldTrump is going back on his word to @NancyPelosi @SenSchumer and jeopardizing 800k… https://t.co/XWJdmCx86F<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="1025"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">04:18PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917529730471153664" target="_blank"> .@realDonaldTrump is putting young #DREAMers' futures on the line in exchange for his wall. Completely cruel, heart… https://t.co/OmGmQhgLD2<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Immigration and Refugees</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="65700"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">03:14PM</span> 
+      <span class="tweet">&#x1F426; Sen Wyden tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917513633382330368" target="_blank"> Great discussion at today's Multnomah County #2017townhall in Corbett about wildfires & urgent need for tax reform… https://t.co/GVizHGkyKI<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Town Halls</span>, <span class="topic">Environment</span>, <span class="topic">Economic Justice and Tax Reform</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8197"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:53PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917508242351247363" target="_blank"> RT @RonWyden: At @Portland_State w/ @brendatracy24 & @SenJeffMerkley hearing why Trump admin. Is totally wrong to reverse work to stop camp…<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8197"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:52PM</span> 
+      <span class="tweet">&#x1F426; Sen Merkley tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917508110780129280" target="_blank"> RT @brendatracy24: Grateful that my US Senators @RonWyden & @SenJeffMerkley are working hard in DC to protect survivors!! https://t.co/Y0ZM…<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="8197"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">02:09PM</span> 
+      <span class="tweet">&#x1F426; Sen Wyden tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917497250170920960" target="_blank"> At @Portland_State w/ @brendatracy24 & @SenJeffMerkley hearing why Trump admin. Is totally wrong to reverse work to… https://t.co/bdQ8I1wHaH<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Wyden</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="tweet timelineEntry card border-primary pt-2 mb-4" data-topics="132"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">10:19AM</span> 
+      <span class="tweet">&#x1F426; Sen Wyden tweets: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="https://twitter.com/statuses/917439437843210241" target="_blank"> Dismantling Clean Power Plan = one more glaring example how this administration can't grasp climate change reality:<br/>https://t.co/RUUFq2Pjlv<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Sen Wyden</span>, <span class="topic">Environment</span>) </p> 
+    
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="16386"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">09:19AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNEuz7d61Ie-XhF6EM7ZpHOeHeZzXw&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779633337810&ei=2IfeWZDqMI_JhgGN_oHoDA&url=http://registerguard.com/rg/opinion/36036112-78/applaud-defazios-turnaround.html.csp" target="_blank"> Applaud DeFazio's turnaround | Opinion | Eugene, Oregon - The Register-Guard<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Rep DeFazio</span>, <span class="topic">Policing and Criminal Justice</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_bbf4ee47b85bfa2de0c55876b7edfa1dd96fa4cc9c022ddc54" aria-expanded="false" aria-controls="details_bbf4ee47b85bfa2de0c55876b7edfa1dd96fa4cc9c022ddc54"> Details  </button>
+</p>
+<div class="collapse" id="details_bbf4ee47b85bfa2de0c55876b7edfa1dd96fa4cc9c022ddc54">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNF979MoVm0XRkE3VnW8p39j6bqyHg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633337810&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://thehill.com/regulation/legislation/354251-five-things-to-know-about-gops-gun-suppressor-bill"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcS-Tz-Jm11XbZiWah8VmaeMdfqkI_U1vAFG7fQp3DRa5H0pW5gZnZSJioDCv_uUEVvQMR2x4hhY" alt="" border="1" width="80" height="80"><br><font size="-2">The Hill</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNEuz7d61Ie-XhF6EM7ZpHOeHeZzXw&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633337810&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://registerguard.com/rg/opinion/36036112-78/applaud-defazios-turnaround.html.csp"><b>Applaud DeFazio&#39;s turnaround | Opinion | Eugene, Oregon</b></a><br><font size="-1"><b><font color="#6f6f6f">The Register-Guard</font></b></font><br><font size="-1">I&#39;m aghast at what happened in Las Vegas, more so because it was on the day of the second anniversary of the tragedy at Umpqua Community College.</font><br><font size="-1"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNF979MoVm0XRkE3VnW8p39j6bqyHg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779633337810&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://thehill.com/regulation/legislation/354251-five-things-to-know-about-gops-gun-suppressor-bill">Five things to know about GOP&#39;s gun-suppressor bill</a><font size="-1" color="#6f6f6f"><nobr>The Hill</nobr></font></font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Applaud DeFazios turnaround  Opinion  Eugene Oregon" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="8193"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">05:08AM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNFwR6G61ptBRKN-tqRbIv-PaXsPIg&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779631313770&ei=xYfeWeCkE46XhgGssKLYAQ&url=https://www.washingtonpost.com/lifestyle/style/hello-iowa-the-2020-race-is-three-years-away-but-democrats-are-itching-to-start-it-now/2017/10/08/4479783a-a79a-11e7-92d1-58c702d2d975_story.html" target="_blank"> Hello, Iowa! The 2020 race is three years away. But Democrats are itching to start it now. - Washington Post<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">None of the Above</span>, <span class="topic">Sen Merkley</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_adfe1fd1f3a8569b0d5ed83becb3adb09389ea5e9a2b2a1563" aria-expanded="false" aria-controls="details_adfe1fd1f3a8569b0d5ed83becb3adb09389ea5e9a2b2a1563"> Details  </button>
+</p>
+<div class="collapse" id="details_adfe1fd1f3a8569b0d5ed83becb3adb09389ea5e9a2b2a1563">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFwR6G61ptBRKN-tqRbIv-PaXsPIg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779631313770&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=https://www.washingtonpost.com/lifestyle/style/hello-iowa-the-2020-race-is-three-years-away-but-democrats-are-itching-to-start-it-now/2017/10/08/4479783a-a79a-11e7-92d1-58c702d2d975_story.html"><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcSBXampQi5TzfAX6ijlXFOpVgP3EI7p0JxGi7uLRZa_JQ3w-cyT3HvErIQr_RWLeroM8TioHPsp" alt="" border="1" width="80" height="80"><br><font size="-2">Washington Post</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNFwR6G61ptBRKN-tqRbIv-PaXsPIg&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;cid=52779631313770&amp;ei=xYfeWeCkE46XhgGssKLYAQ&amp;url=https://www.washingtonpost.com/lifestyle/style/hello-iowa-the-2020-race-is-three-years-away-but-democrats-are-itching-to-start-it-now/2017/10/08/4479783a-a79a-11e7-92d1-58c702d2d975_story.html"><b>Hello, Iowa! The 2020 race is three years away. But Democrats are itching to start it now.</b></a><br><font size="-1"><b><font color="#6f6f6f">Washington Post</font></b></font><br><font size="-1">“I got this message at my office asking if I would meet with <b>Senator Jeff Merkley</b> the other day, and I had to Google him. I thought he might be a state <b>senator</b>.” (The gentleman from Oregon is indeed a member of the grown-up <b>Senate</b>.) And while the three&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Hello Iowa The  race is three years away But Democrats are itching to start it now" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
+</div>
+
+
+<div class="gnews timelineEntry card border-success pt-2 mb-4" data-topics="2850"> 
+  <div class="card-block">
+    <h6 class="card-subtitle">
+      <span class="entryTime">10:16PM</span> 
+      <span class="gnews">&#x1f4f0; GoogleNews: </span>
+    </h6> 
+    <h5 class="card-title">
+      <a href="http://news.google.com/news/url?sa=t&fd=R&ct2=us&usg=AFQjCNHmK-RdePlrSPPcKXNsChARuz8c1g&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=2IfeWZDqMI_JhgGN_oHoDA&url=http://www.washingtonexaminer.com/trumps-apparent-about-face-on-partnerships-injects-huge-question-mark-into-infrastructure-plan/article/2636653" target="_blank"> Trump's apparent about-face on partnerships injects 'huge question mark' into infrastructure plan - Washington Examiner<br/> </a> 
+    </h5>  
+    <p>  (<span class="topic">Rep DeFazio</span>, <span class="topic">Health Care and Reproductive Justice</span>, <span class="topic">International Relations</span>, <span class="topic">Online Rights</span>, <span class="topic">Economic Justice and Tax Reform</span>) </p> 
+    
+<p>
+<button class="btn btn-outline-success btn-sm" type="button" data-toggle="collapse" data-target="#details_d73ea0a8e0d1a40f31493a86a377fe142de9dec39fb89aa950" aria-expanded="false" aria-controls="details_d73ea0a8e0d1a40f31493a86a377fe142de9dec39fb89aa950"> Details  </button>
+</p>
+<div class="collapse" id="details_d73ea0a8e0d1a40f31493a86a377fe142de9dec39fb89aa950">
+<table border="0" cellpadding="2" cellspacing="7" style="vertical-align:top;"><tr><td width="80" align="center" valign="top"><font style="font-size:85%;font-family:arial,sans-serif"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNHmK-RdePlrSPPcKXNsChARuz8c1g&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://www.washingtonexaminer.com/trumps-apparent-about-face-on-partnerships-injects-huge-question-mark-into-infrastructure-plan/article/2636653"><img src="http://t0.gstatic.com/images?q=tbn:ANd9GcT_jVw1V0ImuUMRqujVDTBTayxt7-zlT397p-EIZKP9DhdE3Y8jnw0M5WZ0LlKVyeiPKbte2klP" alt="" border="1" width="80" height="80"><br><font size="-2">Washington Examiner</font></a></font></td><td valign="top" class="j"><font style="font-size:85%;font-family:arial,sans-serif"><br><div style="padding-top:0.8em;"><img alt="" height="1" width="1"></div><div class="lh"><a href="http://news.google.com/news/url?sa=t&amp;fd=R&amp;ct2=us&amp;usg=AFQjCNHmK-RdePlrSPPcKXNsChARuz8c1g&amp;clid=c3a7d30bb8a4878e06b80cf16b898331&amp;ei=2IfeWZDqMI_JhgGN_oHoDA&amp;url=http://www.washingtonexaminer.com/trumps-apparent-about-face-on-partnerships-injects-huge-question-mark-into-infrastructure-plan/article/2636653"><b>Trump&#39;s apparent about-face on partnerships injects &#39;huge question mark&#39; into infrastructure plan</b></a><br><font size="-1"><b><font color="#6f6f6f">Washington Examiner</font></b></font><br><font size="-1">&quot;I was actually very encouraged to hear that,&quot; said <b>Rep</b>. <b>Peter DeFazio</b> of Oregon, the top Democrat on the House Transportation and Infrastructure Committee. &quot;I guess he is a businessman and can see through that concept as a false promise. Hopefully, he&nbsp;...</font><br><font size="-1" class="p"></font><br><font class="p" size="-1"><a href="https://news.google.com/news/search/section/q/Trumps apparent aboutface on partnerships injects huge question mark into infrastructure plan" target="_blank">more...</a></font></div></font></td></tr></table>
+</div>
+
+  </div>
 </div>
 
 
@@ -226,8 +1283,9 @@ function bodyLoaded() {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-
+    <p> <i>Copyrights and references needed!</i> </p>
 
     </div>
     </body>
     </html>
+
