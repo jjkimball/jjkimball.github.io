@@ -114,8 +114,8 @@ function populateButtons() {
 }
 
 function indicatorForNumbits( nbits ) {
-    var RedMark = ' <span style="color:red;font-size:larger;">&#10060;</span> ';    //cross mark
-    var GreenMark = ' <span style="background-color:green;color:white;font-size:larger;">&#10004;</span> ';    //heavy check mark
+    var RedMark = '<span style="color:red;font-size:larger;">&#10060;</span>';    //cross mark
+    var GreenMark = '<span style="background-color:green;color:white;font-size:larger;">&#10004;</span>';    //heavy check mark
     if (nbits >= 90) {
 	return GreenMark + GreenMark + GreenMark;
     } else if (nbits >= 80) {
