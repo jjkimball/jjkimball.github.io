@@ -194,7 +194,7 @@ function bodyLoaded() {
     //generateInTextBox();
     precheck();
     populateButtons();
-    document.getElementById('outputText').value = "Make a Password";		       
+    document.getElementById('outputText').value = "Make a Password";
     document.getElementById( "indicators" ).innerHTML = indicatorForNumbits(0);
     document.getElementById( "re90" ).innerHTML = indicatorForNumbits(90);
     document.getElementById( "re80" ).innerHTML = indicatorForNumbits(80);
