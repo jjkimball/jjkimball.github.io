@@ -114,8 +114,8 @@ function populateButtons() {
 }
 
 function indicatorForNumbits( nbits ) {
-    var RedMark = ' <span style="color:red;font-size:larger;">&#10060;</span> ';    //cross mark
-    var GreenMark = ' <span style="background-color:green;color:white;font-size:larger;">&#10004;</span> ';    //heavy check mark
+    var RedMark = '<span style="color:red;font-size:larger;">&#10060;</span>';    //cross mark
+    var GreenMark = '<span style="background-color:green;color:white;font-size:larger;">&#10004;</span>';    //heavy check mark
     if (nbits >= 90) {
 	return GreenMark + GreenMark + GreenMark;
     } else if (nbits >= 80) {
@@ -130,8 +130,9 @@ function indicatorForNumbits( nbits ) {
 function clearPasswordAndNumbits() {
     itemsChosen = [];
     bitcountRollup = 0;
-    randomlyChosenSep = randomSep();			 
-    document.getElementById('outputText').value = "(3) When you like it, cut it from here, and  paste it to the destination";
+    randomlyChosenSep = randomSep();
+    document.getElementById('outputText').style.fontSize = "3rem";
+    document.getElementById('outputText').value = "Make a Password";
     document.getElementById( "numBits" ).value = "0";
     document.getElementById( "indicators" ).innerHTML = indicatorForNumbits(0);
 }
@@ -158,6 +159,7 @@ function bsel( buttonID ) {
     }
     bitcountRollup += document.getElementById(buttonID).bitcount;
     //document.getElementById('outputText').value = itemsChosen.join( getSep() ).upcaseFirstLetter();
+    document.getElementById('outputText').style.fontSize = "large";
     document.getElementById('outputText').value = itemsChosen.join( getSep() );
     document.getElementById( "numBits" ).value = bitcountRollup.toString();
     document.getElementById( "indicators" ).innerHTML = indicatorForNumbits(bitcountRollup);
@@ -192,7 +194,7 @@ function bodyLoaded() {
     //generateInTextBox();
     precheck();
     populateButtons();
-    document.getElementById('outputText').value = "(3) When you like it, cut it from here, and  paste it to the destination";		       
+    document.getElementById('outputText').value = "Make a Password";		       
     document.getElementById( "indicators" ).innerHTML = indicatorForNumbits(0);
     document.getElementById( "re90" ).innerHTML = indicatorForNumbits(90);
     document.getElementById( "re80" ).innerHTML = indicatorForNumbits(80);
