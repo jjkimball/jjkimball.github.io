@@ -114,14 +114,17 @@ function populateButtons() {
 }
 
 function indicatorForNumbits( nbits ) {
-    var RedMark = '<span style="color:red;font-size:large;">&#10060;</span>';    //cross mark
-    var GreenMark = '<span style="background-color:green;color:white;font-size:large;">&#10004;</span>';    //heavy check mark
+    var RedMark = '<span style="color:red;font-size:large;">&#10060;</span>'; 
+    var GreenMark = '<span style="background-color:green;color:white;font-size:large;">&#10004;</span>';
+    var NoMark = '<span style="font-size:large;">&nbsp;</span>';  
     if (nbits >= 90) {
 	return GreenMark + GreenMark + GreenMark;
     } else if (nbits >= 80) {
 	return GreenMark + GreenMark + RedMark;
     } else if (nbits >= 65) {
 	return GreenMark + RedMark + RedMark;
+    } else if (nbits == 0) {
+	return NoMark + NoMark + NoMark;
     } else {
 	return RedMark + RedMark + RedMark;
     }
@@ -131,7 +134,7 @@ function clearPasswordAndNumbits() {
     itemsChosen = [];
     bitcountRollup = 0;
     randomlyChosenSep = randomSep();
-    document.getElementById('outputText').style.fontSize = "3rem";
+    document.getElementById('outputText').style.fontSize = "x-large";
     document.getElementById('outputText').value = "Make a Password";
     document.getElementById( "numBits" ).value = "0";
     document.getElementById( "indicators" ).innerHTML = indicatorForNumbits(0);
