@@ -202,7 +202,7 @@ function bodyLoaded() {
     document.getElementById( "re90" ).innerHTML = indicatorForNumbits(90);
     document.getElementById( "re80" ).innerHTML = indicatorForNumbits(80);
     document.getElementById( "re65" ).innerHTML = indicatorForNumbits(65);
-    document.getElementById( "re00" ).innerHTML = indicatorForNumbits(0);
+    document.getElementById( "re00" ).innerHTML = indicatorForNumbits(1);
     //enableCopyToClipboard();
     console.log( "bodyLoaded() DONE" );
 }
